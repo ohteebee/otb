@@ -1,67 +1,59 @@
-<div id="header-wrapper">
-	<div id="header" class="container">
-		<div id="logo">
-			<h1><a href="#">O T B</a></h1>
+<section id="landing">
+
+	<header (click)="change()" id="header-wrapper">
+		<div id="header" class="container">
+			<span id="logo">
+				<h1><a href="#">O T B</a></h1><h5>{{phrase}}</h5>
+			</span>
 		</div>
-		<div id="menu">
-			<ul>
-				<li class="active"><a href="#" accesskey="1" title="">Landing</a></li>
-				<li><a href="#" accesskey="2" title="">Our Clients</a></li>
-				<li><a href="#" accesskey="3" title="">About Us</a></li>
-				<li><a href="#" accesskey="4" title="">Careers</a></li>
-				<li><a href="#" accesskey="5" title="">Hire Us</a></li>
+	</header>
+	<main id="wrapper">
+		<div id="three-column" class="container">
+
+			<div class="title">
+				<h2>Services</h2>
+				<span class="byline">Years of practice, we provide top quality services</span>
+			</div>
+			<div class="boxA">
+	            <h3>Mobile App Development</h3>
+				<p>Our top of the line team specializes in hybrid app development.</p>
+
+			</div>
+			<div class="boxB">
+	            <h3>Responsive Web Apps</h3>
+				<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
+
+			</div>
+			<div class="boxC">
+	            <h3>Salesforce</h3>
+				<p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
+
+			</div>
+		</div>
+	</main>
+	<aside id="welcome">
+		<div class="container">
+			<div class="title">
+				<h2>Like what you see?</h2>
+				<span class="byline">Don't hesitate to give us an email or a call just to chat or with a project</span>
+			</div>
+	      <p>This is the best top quality egyptian based programming development agency firm. Feel quality work good to call us or email us and we will get right back to you and serve top quality programmed developemtns applications right to your door with great awesome top quality service. </p>
+			<ul class="actions">
+				<li><a href="#" class="button">Hire us</a></li>
 			</ul>
 		</div>
-	</div>
+	</aside>
+	<footer id="copyright" class="container">
+		<p>&copy;2016 OTB. All rights reserved.</p>
+		<p>
+			OTB Shop<br />
+			Made <3 in SC<br/>
 
-<div id="banner-wrapper">
-	<div id="banner" class="container">
-		<div class="title">
-			<h2>{{phrase}}{{periods}}</h2>
-			<span class="byline">Challenging ourselves to bring you the best possibly products possible</span>
-		</div>
-		<ul class="actions">
-			<li><a href="#" class="button">View our gallery</a></li>
-		</ul>
-	</div>
-</div>
-</div>
-<div id="wrapper">
-	<div id="three-column" class="container">
+			(401) 484-4455<br />
+			mierze@gmail.com<br />
+			jhairgrove@visione.com
 
-		<div class="title">
-			<h2>Services</h2>
-			<span class="byline">Years of practice, we provide top quality services</span>
-		</div>
-		<div class="boxA">
-            <h3>Mobile App Development</h3>
-			<p>Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad  torquent per conubia nostra.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-		<div class="boxB">
-            <h3>Responsive Web Apps</h3>
-			<p>Etiam neque. Vivamus consequat lorem at nisl. Nullam  wisi a sem semper eleifend. Donec mattis. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-		<div class="boxC">
-            <h3>Salesforce</h3>
-			<p> Aenean lectus lorem, imperdiet at, ultrices eget, ornare et, wisi. Pellentesque adipiscing purus. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc.</p>
-			<a href="#" class="button button-alt">More Info</a>
-		</div>
-	</div>
-</div>
-<div id="welcome">
-	<div class="container">
-		<div class="title">
-			<h2>Like what you see?</h2>
-			<span class="byline">Don't hesitate to give us an email or a call just to chat or with a project</span>
-		</div>
-      <p>This is the best top quality egyptian based programming development agency firm. Feel quality work good to call us or email us and we will get right back to you and serve top quality programmed developemtns applications right to your door with great awesome top quality service. </p>
-		<ul class="actions">
-			<li><a href="#" class="button">Hire us</a></li>
-		</ul>
-	</div>
-</div>
-<footer id="copyright" class="container">
-	<p>&copy;2016 OTB. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-</footer>
+		</p>
+	</footer>
+
+</section>

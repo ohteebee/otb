@@ -12,7 +12,7 @@ html {
 body {
     margin     : 0;
     padding    : 0;
-    background : #181818;
+    background : #222;
     font-family: 'Didact Gothic', sans-serif;
     font-size  : 12pt;
     font-weight: 200;
@@ -85,7 +85,7 @@ ul.actions {
         display: inline-block;
         padding: 0 0.50em;
         a {
-            color: $dark;
+            color: $black;
         }
     }
 }
@@ -149,7 +149,7 @@ ul.contact li a.icon-rss:before {
     text-decoration: none;
     font-weight    : 700;
     font-size      : 1em;
-    color          : #3f0900;
+    color          : $dark;
 }
 .button-alt {
     padding     : 1em 2em;
@@ -247,11 +247,11 @@ ul.contact li a.icon-rss:before {
 }
 #logo h1 {
     font-size: 2.6em;
-    color    : #79C255;
+    color    : $primary;
 }
 #logo a {
     text-decoration: none;
-    color          : rgba(255,255,255,1);
+    color          : $light;
 }
 /*********************************************************************************/
 /* Menu                                                                          */
@@ -276,7 +276,7 @@ ul.contact li a.icon-rss:before {
     text-decoration: none;
     text-transform : uppercase;
     font-size      : 0.8em;
-    color          : rgba(255,255,255,0.80);
+    color          : $light;
 }
 #menu li.active a,
 #menu li.active span,
@@ -284,8 +284,8 @@ ul.contact li a.icon-rss:before {
 #menu .active a {
     background   : $primary;
     border-radius: 6px;
-    color        : rgba(255,255,255,1);
-    color        : #3f0900;
+    color        : $light;
+    color        : $black;
 }
 #menu .icon {}
 /*********************************************************************************/
@@ -361,14 +361,14 @@ ul.contact li a.icon-rss:before {
 #welcome .container {
     width  : 1000px;
     padding: 0 100px;
-    color  : rgba(255,255,255,0.8);
+    color  : $light;
 }
 #welcome a {
-    color: rgba(255,255,255,1);
+    color: $light;
 }
 #welcome .button {
-    background: #FFF;
-    color     : #3f0900;
+    background: $light;
+    color     : $dark;
 }
 /*********************************************************************************/
 /* Extra                                                                         */
@@ -385,11 +385,11 @@ ul.contact li a.icon-rss:before {
 }
 #three-column .title h2 {
     font-weight: bold;
-    color      : rgba(0,0,0,0.8);
+    color      : $black;
 }
 #three-column .title .byline {
     text-align: center;
-    color     : rgba(0,0,0,.5);
+    color     : $dark;
 }
 @charset 'UTF-8';
 @font-face {

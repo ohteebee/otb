@@ -5,25 +5,35 @@ html {
   text-decoration: none;
   padding: 0;
   margin: 0;
-  color: #5a5a66; }
+  color: #222; }
 
-div#landing h1, div#landing h2, div#landing h3, div#landing h4, div#landing h5, div#landing p, div#landing span {
-  color: #f4fffd; }
+section#landing header {
+  cursor: hand;
+  background-color: #222; }
+  section#landing header h5 {
+    color: #5a5a66;
+    font-size: 1em; }
 
-div#landing main {
+section#landing header:hover h1 {
+  border-left: 2px solid #87ff65;
+  padding-left: 10px; }
+
+section#landing #welcome {
   background-color: #5a5a66; }
-
-div#landing footer {
-  background-color: #493548; }
-  div#landing footer address, div#landing footer p, div#landing footer strong {
+  section#landing #welcome h1,
+  section#landing #welcome h2,
+  section#landing #welcome h3,
+  section#landing #welcome h4,
+  section#landing #welcome h5,
+  section#landing #welcome p {
+    color: #f4fffd; }
+  section#landing #welcome .button {
     color: #f4fffd; }
 
-nav.main {
-  position: fixed;
-  width: 100%;
-  background-color: #493548; }
-  nav.main h1, nav.main h2, nav.main h3, nav.main h4, nav.main h5, nav.main a, nav.main button, nav.main p {
-    color: #f4fffd; }
+section#landing .button {
+  border: 2px solid #87ff65;
+  background-color: transparent;
+  color: #222; }
 
 body,
 html {
@@ -36,7 +46,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #181818;
+  background: #222;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 12pt;
   font-weight: 200;
@@ -106,7 +116,7 @@ ul.actions li {
   display: inline-block;
   padding: 0 0.50em; }
   ul.actions li a {
-    color: #5a5a66; }
+    color: #222; }
 
 /*********************************************************************************/
 /* Social Icon Styles                                                            */
@@ -168,7 +178,7 @@ ul.contact li a.icon-rss:before {
   text-decoration: none;
   font-weight: 700;
   font-size: 1em;
-  color: #3f0900; }
+  color: #5a5a66; }
 
 .button-alt {
   padding: 1em 2em;
@@ -266,11 +276,11 @@ ul.contact li a.icon-rss:before {
 
 #logo h1 {
   font-size: 2.6em;
-  color: #79C255; }
+  color: #87ff65; }
 
 #logo a {
   text-decoration: none;
-  color: white; }
+  color: #f4fffd; }
 
 /*********************************************************************************/
 /* Menu                                                                          */
@@ -295,13 +305,13 @@ ul.contact li a.icon-rss:before {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8em;
-  color: rgba(255, 255, 255, 0.8); }
+  color: #f4fffd; }
 
 #menu .active a {
   background: #87ff65;
   border-radius: 6px;
-  color: white;
-  color: #3f0900; }
+  color: #f4fffd;
+  color: #222; }
 
 /*********************************************************************************/
 /* Banner                                                                        */
@@ -372,14 +382,14 @@ ul.contact li a.icon-rss:before {
 #welcome .container {
   width: 1000px;
   padding: 0 100px;
-  color: rgba(255, 255, 255, 0.8); }
+  color: #f4fffd; }
 
 #welcome a {
-  color: white; }
+  color: #f4fffd; }
 
 #welcome .button {
-  background: #FFF;
-  color: #3f0900; }
+  background: #f4fffd;
+  color: #5a5a66; }
 
 /*********************************************************************************/
 /* Extra                                                                         */
@@ -396,11 +406,11 @@ ul.contact li a.icon-rss:before {
 
 #three-column .title h2 {
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.8); }
+  color: #222; }
 
 #three-column .title .byline {
   text-align: center;
-  color: rgba(0, 0, 0, 0.5); }
+  color: #5a5a66; }
 
 @font-face {
   font-family: 'FontAwesome';

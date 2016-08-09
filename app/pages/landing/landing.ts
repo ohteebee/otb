@@ -7,12 +7,12 @@ import {Component} from '@angular/core';
 })
 export class Landing {
     email: string = '';
+    phrases: string[] = ['Outside the box...', 'On the ball...', 'On the brink...', 'On the bridge...'];
     phrase: string = '';
     periods: string = '';
-    index: number = 1;
+    index: number = 0;
     constructor() {
-        this.phrase = 'Outside The Box';
-        this.periods = '...';
+        this.phrase = this.phrases[this.index];
         // while (true) {
         //     setTimeout(function() {
         //         console.log(this.index);
@@ -26,6 +26,14 @@ export class Landing {
         //         } else this.index++;
         //     }, 500);
         // }
+    }
+    change() {
+        if (this.index === this.phrases.length - 1) {
+            this.index = 0;
+        } else {
+            this.index++;
+        }
+        this.phrase = this.phrases[this.index];
     }
 
     subscribe() {

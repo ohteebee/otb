@@ -1,13 +1,39 @@
-div#landing {
-  h1,h2,h3,h4,h5,p, span {
-    color: $light;
-  }
-  main {
-    background-color: $dark;
-  }
-  footer {
-    background-color: $secondary;
-    address, p, strong {color: $light;  }
-  }
-
+section#landing {
+    header {
+        cursor          : hand;
+        background-color: #222;
+        h5 {
+            color    : $dark;
+            font-size: 1em;
+        }
+    }
+    header:hover {
+        h1 {
+            border-left : 2px solid $primary;
+            padding-left: 10px;
+        }
+    }
+    .boxA,
+    .boxB,
+    .boxC {}
+    #welcome {
+        background-color: $dark;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
+            color: $light;
+        }
+        .button {
+            color: $light;
+        }
+    }
+    .button {
+        border          : 2px solid $primary;
+        background-color: transparent;
+        color           : $black;
+    }
+    footer {}
 }

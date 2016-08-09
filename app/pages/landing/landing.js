@@ -12,11 +12,11 @@ var core_1 = require('@angular/core');
 var Landing = (function () {
     function Landing() {
         this.email = '';
+        this.phrases = ['Outside the box...', 'On the ball...', 'On the brink...', 'On the bridge...'];
         this.phrase = '';
         this.periods = '';
-        this.index = 1;
-        this.phrase = 'Outside The Box';
-        this.periods = '...';
+        this.index = 0;
+        this.phrase = this.phrases[this.index];
         // while (true) {
         //     setTimeout(function() {
         //         console.log(this.index);
@@ -31,6 +31,15 @@ var Landing = (function () {
         //     }, 500);
         // }
     }
+    Landing.prototype.change = function () {
+        if (this.index === this.phrases.length - 1) {
+            this.index = 0;
+        }
+        else {
+            this.index++;
+        }
+        this.phrase = this.phrases[this.index];
+    };
     Landing.prototype.subscribe = function () {
         //
         //   let xhr = new XMLHttpRequest();
