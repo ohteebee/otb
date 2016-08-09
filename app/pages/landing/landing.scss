@@ -1,0 +1,13 @@
+div#landing {
+  h1,h2,h3,h4,h5,p, span {
+    color: $light;
+  }
+  main {
+    background-color: $dark;
+  }
+  footer {
+    background-color: $secondary;
+    address, p, strong {color: $light;  }
+  }
+
+}
