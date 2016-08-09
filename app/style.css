@@ -30,6 +30,9 @@ section#landing #welcome {
   section#landing #welcome .button {
     color: #f4fffd; }
 
+section#landing #pen {
+  color: #493548; }
+
 section#landing .button {
   border: 2px solid #87ff65;
   background-color: transparent;
