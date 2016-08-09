@@ -12,19 +12,38 @@ var core_1 = require('@angular/core');
 var Landing = (function () {
     function Landing() {
         this.email = '';
+        this.phrase = '';
+        this.periods = '';
+        this.index = 1;
+        this.phrase = 'Outside The Box';
+        this.periods = '...';
+        // while (true) {
+        //     setTimeout(function() {
+        //         console.log(this.index);
+        //         this.periods = '';
+        //         let test = this.index;
+        //         while (test--) {
+        //             this.periods += '.'
+        //         }
+        //         if (this.index === 3) {
+        //             this.index = 1;
+        //         } else this.index++;
+        //     }, 500);
+        // }
     }
     Landing.prototype.subscribe = function () {
-        alert("here");
-        var xhr = new XMLHttpRequest();
-        var self = this;
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                self.email = '';
-            }
-        };
-        xhr.open('POST', 'http://otb-api.herokuapp.com/api/email', true);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.send('to=mierze@gmail.com&from=TrimblesTreats Mail Service<' + this.email + '>&subject=New email!&message=' + this.email);
+        //
+        //   let xhr = new XMLHttpRequest();
+        //   let self=this;
+        //   xhr.onreadystatechange = function() {
+        //     if (xhr.readyState == 4 && xhr.status == 200) {
+        //       self.email = '';
+        //     }
+        //   }
+        //   xhr.open('POST', 'http://otb-api.herokuapp.com/api/email', true);
+        //   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        //   xhr.send('to=mierze@gmail.com&from=TrimblesTreats Mail Service<' + this.email + '>&subject=New email!&message=' + this.email);
+        //
     };
     Landing = __decorate([
         core_1.Component({
