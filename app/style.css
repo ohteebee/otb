@@ -4906,15 +4906,17 @@ html {
 header {
   padding: 10px; }
 
-section#landing header {
+.row .container {
+  max-width: 100%; }
+
+section#landing #landing-header {
   cursor: hand;
   background-color: #222; }
-  section#landing header h5 {
+  section#landing #landing-header h5 {
     color: #5a5a66;
     font-size: 1em; }
 
 section#landing section#services header {
-  background-color: #f4fffd;
   text-align: center; }
   section#landing section#services header h2, section#landing section#services header h5 {
     color: #222; }

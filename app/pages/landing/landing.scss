@@ -1,15 +1,16 @@
 section#landing {
-    header {
-        cursor          : hand;
-        background-color: $black;
-        h5 {
-            color    : $brand-inverse;
-            font-size: 1em;
-        }
+  #landing-header {
+    cursor:hand;
+    background-color: $black;
+    // cursor          : hand;
+    h5 {
+        color    : $brand-inverse;
+        font-size: 1em;
     }
+  }
+
     section#services {
       header {
-        background-color: $light;
         text-align: center;
         h2,h5 {
 
