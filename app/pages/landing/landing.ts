@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 export class Landing {
     email: string = '';
-    phrases: string[] = ['Outside the box...', 'On the ball...', 'On the brink...', 'On the bridge...'];
+    phrases: string[] = ['Outside the box...', 'On the ball...', 'On the brink...', 'Only the best...', 'On the bridge...', 'Occasional total brilliance...'];
     phrase: string = '';
     periods: string = '';
     index: number = 0;
