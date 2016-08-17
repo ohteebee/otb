@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var Landing = (function () {
     function Landing() {
         this.email = '';
-        this.phrases = ['Outside the box...', 'On the ball...', 'On the brink...', 'On the bridge...'];
+        this.phrases = ['Outside the box...', 'On the ball...', 'On the brink...', 'Only the best...', 'On the bridge...', 'Occasional total brilliance...'];
         this.phrase = '';
         this.periods = '';
         this.index = 0;
