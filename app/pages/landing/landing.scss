@@ -1,6 +1,20 @@
 section#landing {
+  .card {
+    padding: $gap;
+    background-color: rgba($brand-info, .5);
+    span {
+      // color: $brand-inverse;
+    }
+    h1,h5,p {
+      color: $light !important;
+    }
+  }
     #landing-header {
+      padding: 40px;
         cursor: hand;
+        h1,a {
+          color: $light;
+        }
         background-color: $black;
         // cursor          : hand;
         -webkit-user-select: none;
@@ -29,20 +43,7 @@ section#landing {
             padding-left: 10px;
         }
     }
-    #welcome {
-        background-color: $brand-inverse;
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        p {
-            color: $light;
-        }
-        .button {
-            color: $light;
-        }
-    }
+    
     #pen {
         color: $brand-info;
     }
