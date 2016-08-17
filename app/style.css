@@ -4911,14 +4911,21 @@ header {
 
 section#landing #landing-header {
   cursor: hand;
-  background-color: #222; }
+  background-color: #222;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */ }
   section#landing #landing-header h5 {
     color: #5a5a66;
     font-size: 1em; }
 
 section#landing section#services header {
   text-align: center; }
-  section#landing section#services header h2, section#landing section#services header h5 {
+  section#landing section#services header h2,
+  section#landing section#services header h5 {
     color: #222; }
 
 section#landing header:hover h1 {

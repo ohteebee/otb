@@ -1,26 +1,31 @@
 section#landing {
-  #landing-header {
-    cursor:hand;
-    background-color: $black;
-    // cursor          : hand;
-    h5 {
-        color    : $brand-inverse;
-        font-size: 1em;
-    }
-  }
-
-    section#services {
-      header {
-        text-align: center;
-        h2,h5 {
-
-          color: $black;
+    #landing-header {
+        cursor: hand;
+        background-color: $black;
+        // cursor          : hand;
+        -webkit-user-select: none;
+        /* Chrome/Safari */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* IE10+ */
+        h5 {
+            color: $brand-inverse;
+            font-size: 1em;
         }
-      }
+    }
+    section#services {
+        header {
+            text-align: center;
+            h2,
+            h5 {
+                color: $black;
+            }
+        }
     }
     header:hover {
         h1 {
-            border-left : 2px solid $brand-primary;
+            border-left: 2px solid $brand-primary;
             padding-left: 10px;
         }
     }
@@ -42,9 +47,9 @@ section#landing {
         color: $brand-info;
     }
     .button {
-        border          : 2px solid $brand-primary;
+        border: 2px solid $brand-primary;
         background-color: transparent;
-        color           : $black;
+        color: $black;
     }
     footer {}
 }
