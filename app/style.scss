@@ -12,11 +12,10 @@ html {
 body {
     margin     : 0;
     padding    : 0;
-    background : #222;
-    font-family: 'Didact Gothic', sans-serif;
+    background : $black;
     font-size  : 12pt;
     font-weight: 200;
-    color      : #FFF;
+    color      : $gray-lightest;
 }
 h1,
 h2,
@@ -39,7 +38,7 @@ p {
 }
 strong {}
 a {
-    color: $danger;
+    color: $brand-danger;
 }
 a:hover {
     text-decoration: none;
@@ -144,12 +143,12 @@ ul.contact li a.icon-rss:before {
     letter-spacing : 0.10em;
     margin-top     : 2em;
     padding        : 1.40em 3em;
-    background     : $primary;
+    background     : $brand-primary;
     border-radius  : 6px;
     text-decoration: none;
     font-weight    : 700;
     font-size      : 1em;
-    color          : $dark;
+    color          : $brand-inverse;
 }
 .button-alt {
     padding     : 1em 2em;
@@ -222,7 +221,7 @@ ul.contact li a.icon-rss:before {
 }
 #logo h1 {
     font-size: 2.6em;
-    color    : $primary;
+    color    : $brand-primary;
 }
 #logo a {
     text-decoration: none;
@@ -257,7 +256,7 @@ ul.contact li a.icon-rss:before {
 #menu li.active span,
 #menu li:hover a {}
 #menu .active a {
-    background   : $primary;
+    background   : $brand-primary;
     border-radius: 6px;
     color        : $light;
     color        : $black;
@@ -268,7 +267,7 @@ ul.contact li a.icon-rss:before {
 /*********************************************************************************/
 #banner-wrapper {
     padding   : 5em 0;
-    background: $dark;
+    background: $brand-inverse;
 }
 #banner {
     text-align: center;
@@ -329,7 +328,7 @@ ul.contact li a.icon-rss:before {
 #welcome {
     position       : relative;
     padding        : 7em 0;
-    background     : $primary;
+    background     : $brand-primary;
     background-size: cover;
     text-align     : center;
 }
@@ -343,7 +342,7 @@ ul.contact li a.icon-rss:before {
 }
 #welcome .button {
     background: $light;
-    color     : $dark;
+    color     : $brand-inverse;
 }
 /*********************************************************************************/
 /* Extra                                                                         */
@@ -364,7 +363,7 @@ ul.contact li a.icon-rss:before {
 }
 #three-column .title .byline {
     text-align: center;
-    color     : $dark;
+    color     : $brand-inverse;
 }
 @charset 'UTF-8';
 @font-face {

@@ -8,3 +8,14 @@ html {
     color          : #222;
 }
 body {}
+.center {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+header {
+  padding: $gap;
+}
+.row .container {
+  max-width: 100%;
+}

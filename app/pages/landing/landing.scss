@@ -1,23 +1,30 @@
 section#landing {
     header {
         cursor          : hand;
-        background-color: #222;
+        background-color: $black;
         h5 {
-            color    : $dark;
+            color    : $brand-inverse;
             font-size: 1em;
         }
     }
+    section#services {
+      header {
+        background-color: $light;
+        text-align: center;
+        h2,h5 {
+
+          color: $black;
+        }
+      }
+    }
     header:hover {
         h1 {
-            border-left : 2px solid $primary;
+            border-left : 2px solid $brand-primary;
             padding-left: 10px;
         }
     }
-    .boxA,
-    .boxB,
-    .boxC {}
     #welcome {
-        background-color: $dark;
+        background-color: $brand-inverse;
         h1,
         h2,
         h3,
@@ -31,10 +38,10 @@ section#landing {
         }
     }
     #pen {
-        color: $secondary;
+        color: $brand-info;
     }
     .button {
-        border          : 2px solid $primary;
+        border          : 2px solid $brand-primary;
         background-color: transparent;
         color           : $black;
     }
