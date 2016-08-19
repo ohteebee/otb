@@ -4946,7 +4946,9 @@ footer {
 
 section#landing .card {
   padding: 10px;
-  background-color: rgba(73, 53, 72, 0.5); }
+  background-color: #493548; }
+  section#landing .card h3, section#landing .card span {
+    color: #f4fffd; }
   section#landing .card h1, section#landing .card h5, section#landing .card p {
     color: #f4fffd !important; }
 

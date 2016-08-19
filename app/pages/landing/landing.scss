@@ -1,7 +1,10 @@
 section#landing {
   .card {
     padding: $gap;
-    background-color: rgba($brand-info, .5);
+    h3, span {
+      color: $light;
+    }
+    background-color: rgba($brand-info, 1);
     span {
       // color: $brand-inverse;
     }
@@ -43,7 +46,7 @@ section#landing {
             padding-left: 10px;
         }
     }
-    
+
     #pen {
         color: $brand-info;
     }
