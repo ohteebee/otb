@@ -58,4 +58,7 @@ footer {
 }
 .btn-big {
   padding: 20px 40px;
+  &:hover {
+    background-color: transparent;
+  }
 }

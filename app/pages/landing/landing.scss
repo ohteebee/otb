@@ -41,7 +41,7 @@ section#landing {
         }
     }
     header:hover {
-        h1 {
+        h1, h5 {
             border-left: 2px solid $brand-primary;
             padding-left: 10px;
         }
@@ -50,10 +50,10 @@ section#landing {
     #pen {
         color: $brand-info;
     }
-    .button {
-        border: 2px solid $brand-primary;
-        background-color: transparent;
-        color: $black;
+    footer {
+
+      p {
+        color: $brand-inverse;
+      }
     }
-    footer {}
 }
