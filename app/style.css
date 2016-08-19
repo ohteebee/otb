@@ -4925,6 +4925,9 @@ footer {
   footer p {
     color: #f4fffd; }
 
+.brand-info {
+  color: #493548 !important; }
+
 .brand-primary-bg {
   background-color: #87ff65; }
 
