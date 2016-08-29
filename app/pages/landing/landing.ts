@@ -7,9 +7,10 @@ import {Component} from '@angular/core';
 })
 export class Landing {
     email: string = '';
+    showForm: boolean = false;
     phrases: string[] = ['Outside the box...', 'On the ball...', 'On the brink...', 'Only the best...', 'On the bridge...', 'Occasional total brilliance...'];
     phrase: string = '';
-    periods: string = '';
+    formData: any = {};
     index: number = 0;
     constructor() {
         this.phrase = this.phrases[this.index];
@@ -36,18 +37,23 @@ export class Landing {
         this.phrase = this.phrases[this.index];
     }
 
-    subscribe() {
-        //
-        //   let xhr = new XMLHttpRequest();
-        //   let self=this;
-        //   xhr.onreadystatechange = function() {
-        //     if (xhr.readyState == 4 && xhr.status == 200) {
-        //       self.email = '';
-        //     }
-        //   }
-        //   xhr.open('POST', 'http://otb-api.herokuapp.com/api/email', true);
-        //   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        //   xhr.send('to=mierze@gmail.com&from=TrimblesTreats Mail Service<' + this.email + '>&subject=New email!&message=' + this.email);
-        //
+    sendForm() {
+        let xhr = new XMLHttpRequest();
+        let self = this;
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+              self.formData = {};
+              self.showForm = false;
+            }
+        }
+        xhr.open('POST', 'http://otb-api.herokuapp.com/api/email/plain', true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        var data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
+        xhr.send(JSON.stringify(data));
+    }
+    makeMessage() {
+        let msg = 'Email: ' + this.formData.email + '\nAbout: ' + this.formData.about
+            + '\nFrom: ' + this.formData.name;
+        return msg;
     }
 }

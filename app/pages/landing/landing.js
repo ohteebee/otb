@@ -12,9 +12,10 @@ var core_1 = require('@angular/core');
 var Landing = (function () {
     function Landing() {
         this.email = '';
+        this.showForm = false;
         this.phrases = ['Outside the box...', 'On the ball...', 'On the brink...', 'Only the best...', 'On the bridge...', 'Occasional total brilliance...'];
         this.phrase = '';
-        this.periods = '';
+        this.formData = {};
         this.index = 0;
         this.phrase = this.phrases[this.index];
         // while (true) {
@@ -40,19 +41,24 @@ var Landing = (function () {
         }
         this.phrase = this.phrases[this.index];
     };
-    Landing.prototype.subscribe = function () {
-        //
-        //   let xhr = new XMLHttpRequest();
-        //   let self=this;
-        //   xhr.onreadystatechange = function() {
-        //     if (xhr.readyState == 4 && xhr.status == 200) {
-        //       self.email = '';
-        //     }
-        //   }
-        //   xhr.open('POST', 'http://otb-api.herokuapp.com/api/email', true);
-        //   xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        //   xhr.send('to=mierze@gmail.com&from=TrimblesTreats Mail Service<' + this.email + '>&subject=New email!&message=' + this.email);
-        //
+    Landing.prototype.sendForm = function () {
+        var xhr = new XMLHttpRequest();
+        var self = this;
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                self.formData = {};
+                self.showForm = false;
+            }
+        };
+        xhr.open('POST', 'http://otb-api.herokuapp.com/api/email/plain', true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        var data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
+        xhr.send(JSON.stringify(data));
+    };
+    Landing.prototype.makeMessage = function () {
+        var msg = 'Email: ' + this.formData.email + '\nAbout: ' + this.formData.about
+            + '\nFrom: ' + this.formData.name;
+        return msg;
     };
     Landing = __decorate([
         core_1.Component({

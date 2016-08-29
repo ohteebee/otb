@@ -1,77 +1,111 @@
 <section id="landing">
 
-	<header class="hand" (click)="change()" id="landing-header">
-		<!-- <h1>O T B</h1> -->
-		<img src="otb-logo.png"/>
+    <header class="hand" (click)="change()" id="landing-header">
+        <img src="otb-logo.png"/>
 
-		<h5 style="margin-left: 190px; margin-top: -30px;">{{phrase}}</h5>
-	</header>
-	<section class="wrapper" id="services">
-		<div class="container">
-			<header class="title">
-				<h2 class="brand-info">Services</h2>
-				<h5></h5>
-			</header>
-			<div class="row">
-				<div class="col-lg-4">
-					<div class="card">
-						<header>
-							<h3 class="center">Hybrid App Development</h3>
-							<span class="center">Mobile | Desktop | Web</span>
-						</header>
+        <h5 style="margin-left: 190px; margin-top: -30px;">{{phrase}}</h5>
+    </header>
+    <section class="wrapper" id="services">
+        <div class="container">
+            <header class="title">
+                <h2 class="brand-info">Services</h2>
+                <h5></h5>
+            </header>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <header>
+                            <h3 class="center">Hybrid App Development</h3>
+                            <span class="center">Mobile | Desktop | Web</span>
+                        </header>
 
-						<p>Our team specializes in modern javascript development, leveraging tools like Cordova and Electron we can accomplish high quality native mobile and desktop apps the same as we write web apps. Thus cutting the time and cost of ramping up multiple unique code bases.</p>
+                        <p>Our team specializes in modern javascript development, leveraging tools like Cordova and Electron we can accomplish high quality native mobile and desktop apps the same as we write web apps. Thus cutting the time and cost of ramping up multiple
+                            unique code bases.</p>
 
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="card">
-						<header>
-							<h3 class="center">Custom Built Apps</h3>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
+                        <header>
+                            <h3 class="center">Custom Built Apps</h3>
 
-							<span class="center">Like a match made in heaven</span>
-						</header>
+                            <span class="center">Like a match made in heaven</span>
+                        </header>
 
-						<p>Built for you, everything you want, nothing you don't. Trust us, we love cookies, but skip those cookie cutter solutions. If you want your app to stand out from the pack, you are in the right place! We take the time to understand your needs and
-							come up with the best solution for the job at hand.</p>
+                        <p>Built for you, everything you want, nothing you don't. Trust us, we love cookies, but skip those cookie cutter solutions. If you want your app to stand out from the pack, you are in the right place! We take the time to understand your needs and
+                            come up with the best solution for the job at hand.</p>
 
-					</div>
-				</div>
-				<div class="col-lg-4">
-					<div class="card">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card">
 
-						<header>
-							<h3 class="center">Integrations</h3>
-							<span class="center">We've got you covered</span>
-						</header>
+                        <header>
+                            <h3 class="center">Integrations</h3>
+                            <span class="center">We've got you covered</span>
+                        </header>
 
-						<p>Does your team use Salesforce, Constant Contact, Trello, Slack or any other tools internally? Chances are we can take your integrations to the next level to streamline your business by maximizing your productivity.</p>
-					</div>
-				</div>
+                        <p>Does your team use Salesforce, Constant Contact, Trello, Slack or any other tools internally? Chances are we can take your integrations to the next level to streamline your business by maximizing your productivity.</p>
+                    </div>
+                </div>
 
-			</div>
-		</div>
-	</section>
+            </div>
+        </div>
+    </section>
 
-	<section class="wrapper brand-inverse-bg">
-		<div class="container">
-			<header>
-				<h2 class="center">Like what you see?</h2>
-			</header>
-			<p class="center">Don't hesitate to give us an email or a call just to chat or with a project, we would love to hear from you. As we are ramping up we are offering specials for the first ten clients! Contact us fast to secure an amazing deal!</p>
+    <section class="wrapper brand-inverse-bg">
+        <div class="container">
+            <header>
+                <h2 class="center">Like what you see?</h2>
+            </header>
+            <p class="center">Don't hesitate to give us an email or a call just to chat or with a project, we would love to hear from you. As we are ramping up we are offering specials for the first ten clients! Contact us fast to secure an amazing deal!</p>
 
-			<button style="margin-top: 20px" class="btn btn-outline-primary btn-big center">Hire us</button>
-		</div>
-	</section>
-	<footer id="copyright">
-		<p>&copy;2016 OTB. All rights reserved.</p>
-		<p>
-			OTB
-			<br /> HQ in Greenville, SC
-			<br/> (401) 484-4455
-			<br /> mierze@gmail.com
-			<br /> jmhairgrove@gmail.com
-		</p>
-	</footer>
+            <button class="btn btn-outline-primary btn-big center m-t-2" (click)="showForm = true">Hire us</button>
+        </div>
+    </section>
+    <div class="modal" *ngIf="showForm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-label="Close" (click)="showForm = false">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">We look forward to working with you!</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">What is your name?</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jane Doe" [(ngModel)]="formData.name">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactInput">How can we reach you?</label>
+                            <input type="text" class="form-control" id="contactInput" placeholder="abc@123.com" [(ngModel)]="formData.email">
+                        </div>
+                        <div class="form-group">
+                            <label for="aboutInput">Tell us about your project?</label>
+                            <textarea class="form-control" id="aboutInput" rows="4" [(ngModel)]="formData.about"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block p-a-1" (click)="sendForm()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="copyright">
+        <p>&copy;2016 OTB. All rights reserved.</p>
+        <p>
+            OTB
+            <br/>
+            HQ in Greenville, SC
+            <br/>
+            (401) 484-4455
+            <br/>
+            mierze@gmail.com
+            <br/>
+            jmhairgrove@gmail.com
+        </p>
+    </footer>
 
 </section>
