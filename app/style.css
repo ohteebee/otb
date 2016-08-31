@@ -4764,7 +4764,7 @@ body .highlight {
   color: #87ff65; }
 
 body .text-dark {
-  color: #222; }
+  color: #222 !important; }
 
 body .text-light {
   color: #f4fffd; }
