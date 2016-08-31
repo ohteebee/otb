@@ -11,57 +11,60 @@ body,
 html {
     max-width: 100% !important;
 }
-.center {
-    text-align: center;
-    margin: auto;
-    display: block;
-}
-header {
-    padding: $gap;
-}
-.row .container {
-    max-width: 100%;
-    width: 100%;
-}
-a:active,
-a:hover {
-    text-decoration: none !important;
-    border-bottom: 0;
-}
-footer {
-    background-color: $black;
-    padding: 40px $gap;
-    p {
-        @extend .center;
-        color: $light;
+body {
+    .center {
+        text-align: center;
+        margin: auto;
+        display: block;
     }
-}
-.brand-info {
-  color: $brand-info !important;
-}
-.brand-primary-bg {
-    background-color: $brand-primary;
-}
-.wrapper {
-    padding: 40px 0;
-}
-.brand-inverse-bg {
-    background-color: $brand-inverse;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    p {
-        color: $light;
+    header {
+        padding: $gap;
     }
-}
-.btn-big {
-  padding: 20px 40px;
-  &:hover {
-    background-color: transparent;
-  }
-}
-.mega-octicon {
-  font-size: 40px !important;
+    .row .container {
+        max-width: 100%;
+        width: 100%;
+    }
+    a:active,
+    a:hover {
+        text-decoration: none !important;
+        border-bottom: 0;
+    }
+    footer {
+        background-color: $black;
+        padding: 40px $gap;
+        p {
+            @extend .center;
+            color: $light;
+        }
+    }
+    .brand-info {
+        color: $brand-info !important;
+    }
+    .brand-primary-bg {
+        background-color: $brand-primary;
+    }
+    .wrapper {
+        padding: 40px 0;
+    }
+    .brand-inverse-bg {
+        background-color: $brand-inverse;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
+            color: $light;
+        }
+    }
+    .btn-big {
+        padding: 20px 40px;
+        &:hover {
+            background-color: transparent;
+        }
+    }
+    .mega-octicon {
+        font-size: 40px !important;
+    }
+    .highlight {color: $brand-primary;}
 }

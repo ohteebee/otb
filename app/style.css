@@ -4901,55 +4901,58 @@ body,
 html {
   max-width: 100% !important; }
 
-.center, footer p {
+body .center, body footer p {
   text-align: center;
   margin: auto;
   display: block; }
 
-header {
+body header {
   padding: 10px; }
 
-.row .container {
+body .row .container {
   max-width: 100%;
   width: 100%; }
 
-a:active,
-a:hover {
+body a:active,
+body a:hover {
   text-decoration: none !important;
   border-bottom: 0; }
 
-footer {
+body footer {
   background-color: #222;
   padding: 40px 10px; }
-  footer p {
+  body footer p {
     color: #f4fffd; }
 
-.brand-info {
+body .brand-info {
   color: #493548 !important; }
 
-.brand-primary-bg {
+body .brand-primary-bg {
   background-color: #87ff65; }
 
-.wrapper {
+body .wrapper {
   padding: 40px 0; }
 
-.brand-inverse-bg {
+body .brand-inverse-bg {
   background-color: #5a5a66; }
-  .brand-inverse-bg h1,
-  .brand-inverse-bg h2,
-  .brand-inverse-bg h3,
-  .brand-inverse-bg h4,
-  .brand-inverse-bg h5,
-  .brand-inverse-bg p {
+  body .brand-inverse-bg h1,
+  body .brand-inverse-bg h2,
+  body .brand-inverse-bg h3,
+  body .brand-inverse-bg h4,
+  body .brand-inverse-bg h5,
+  body .brand-inverse-bg p {
     color: #f4fffd; }
 
-.btn-big {
+body .btn-big {
   padding: 20px 40px; }
-  .btn-big:hover {
+  body .btn-big:hover {
     background-color: transparent; }
 
-.mega-octicon {
+body .mega-octicon {
   font-size: 40px !important; }
+
+body .highlight {
+  color: #87ff65; }
 
 section#landing .card {
   padding: 10px 20px;
