@@ -1,13 +1,20 @@
 <section id="landing">
-    <header class="hand" (click)="change()" id="landing-header">
+    <header class="hand hidden-sm-down" (click)="change()" id="landing-header">
         <img src="otb-logo.png"/>
+
         <h5 id="phrase">{{phrase}}</h5>
+    </header>
+
+    <header class="hand hidden-md-up" (click)="change()" id="landing-header-mobile">
+        <!-- <span class="mega-octicon octicon-triangle-down"></span> -->
+        <a href="#"><img src="otb-logo.png"/></a>
+
     </header>
     <section class="wrapper" id="services">
         <div class="container">
-          <header class="center">
-            <h1 class="text-info">Services</h1>
-          </header>
+            <header class="center">
+                <h1 class="text-info">Services</h1>
+            </header>
 
             <div class="row">
                 <div class="col-lg-4">
@@ -99,14 +106,14 @@
         </div>
     </div>
     <aside class="modal toast" role="dialog" *ngIf="showSuccess">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content p-a-2 bg-primary center">
-          <p class="text-dark weight-500">
-            Thank you, we will get back to you within the next 48 hours!
-          </p>
-          <span class="mega-octicon octicon-clock"></span>
+        <div class="modal-dialog modal-md">
+            <div class="modal-content p-a-2 bg-primary center">
+                <p class="text-dark weight-500">
+                    Thank you, we will get back to you within the next 48 hours!
+                </p>
+                <span class="mega-octicon octicon-clock"></span>
+            </div>
         </div>
-      </div>
     </aside>
     <footer id="copyright">
         <p>&copy;2016 OTB. All rights reserved.</p>

@@ -4741,6 +4741,9 @@ body .brand-primary-bg {
 
 body .wrapper {
   padding: 40px 0; }
+  @media screen and (max-width: 767px) {
+    body .wrapper {
+      padding-top: 80px; } }
 
 body .brand-inverse-bg {
   background-color: #5a5a66; }
@@ -4787,6 +4790,16 @@ section#landing .card {
     color: #f4fffd; }
   section#landing .card h1, section#landing .card h5, section#landing .card p {
     color: #f4fffd !important; }
+
+section#landing #landing-header-mobile {
+  position: fixed;
+  top: 0;
+  width: auto;
+  z-index: 99999;
+  background-color: #f15025 !important; }
+  section#landing #landing-header-mobile img {
+    height: 60px;
+    width: auto; }
 
 section#landing #landing-header {
   padding: 40px;

@@ -51,6 +51,9 @@ body {
         background-color: $brand-primary;
     }
     .wrapper {
+      @media screen and(max-width: 767px) {
+        padding-top: 80px;
+      }
         padding: 40px 0;
     }
     .brand-inverse-bg {

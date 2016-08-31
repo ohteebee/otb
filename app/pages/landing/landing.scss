@@ -12,6 +12,18 @@ section#landing {
       color: $light !important;
     }
   }
+  #landing-header-mobile {
+    position: fixed;
+    top: 0;
+    width: auto;
+    z-index: 99999;
+    background-color: $brand-danger !important;
+
+    img {
+      height: 60px;
+      width: auto;
+    }
+  }
     #landing-header {
       &:hover {
           h1, h5 {
