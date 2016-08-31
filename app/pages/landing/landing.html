@@ -1,14 +1,12 @@
 <section id="landing">
-
     <header class="hand" (click)="change()" id="landing-header">
         <img src="otb-logo.png"/>
-
-        <h5 style="margin-left: 190px; margin-top: -30px;">{{phrase}}</h5>
+        <h5 id="phrase">{{phrase}}</h5>
     </header>
     <section class="wrapper" id="services">
         <div class="container">
             <header class="title">
-                <h2 class="brand-info">Services</h2>
+                <h1 class="brand-info">Services</h1>
                 <h5></h5>
             </header>
             <div class="row">
@@ -22,7 +20,8 @@
 
                         </header>
 
-                        <p>Our team specializes in modern javascript development. Leveraging tools like Cordova and Electron we can craft high quality mobile, desktop and web apps with tremendous code overlap. Thus cutting the time and cost of ramping up unique code bases for each device.</p>
+                        <p>Our team specializes in modern javascript development. Leveraging tools like Cordova and Electron we can craft high quality mobile, desktop and web apps with tremendous code share. This results in higher quality apps in a fractions of the time it
+                            takes to ramp up unique code bases for each platform you wish to target.</p>
 
                     </div>
                 </div>
@@ -62,9 +61,11 @@
     <section class="wrapper brand-inverse-bg">
         <div class="container">
             <header>
-                <h2 class="center">Like what you see?</h2>
+                <h1 class="center">Like what you see?</h1>
             </header>
-            <p class="center">Don't hesitate to give us an email or a call just to chat or with a project, we would love to hear from you. As we are ramping up we are running a promotion. <span class="highlight">50% off</span> for the first five clients! Only two spots left, contact us fast to secure an amazing deal!</p>
+            <p class="center">Don't hesitate to give us an email or a call just to chat or with a project, we would love to hear from you. As we are ramping up we are running a promotion.
+                <span class="highlight">50% off</span>
+                for the first five clients! Only two spots left, contact us fast to secure an amazing deal!</p>
 
             <button class="btn btn-outline-primary btn-big center m-t-2" (click)="showForm = true">Hire us</button>
         </div>
@@ -82,8 +83,7 @@
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">What is your name?</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jane Doe" [(ngModel)]="formData.name">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jane Doe" [(ngModel)]="formData.name">
                         </div>
                         <div class="form-group">
                             <label for="contactInput">How can we reach you?</label>
@@ -93,12 +93,22 @@
                             <label for="aboutInput">Tell us about your project?</label>
                             <textarea class="form-control" id="aboutInput" rows="4" [(ngModel)]="formData.about"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block p-a-1" (click)="sendForm()">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-block p-a-1 text-dark" (click)="sendForm()">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    <aside class="modal toast" role="dialog" *ngIf="showSuccess">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content p-a-2 bg-primary center">
+          <p class="text-dark weight-500">
+            Thank you, we will get back to you within the next 48 hours!
+          </p>
+          <span class="mega-octicon octicon-clock"></span>
+        </div>
+      </div>
+    </aside>
     <footer id="copyright">
         <p>&copy;2016 OTB. All rights reserved.</p>
         <p>

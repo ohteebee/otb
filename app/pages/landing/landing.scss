@@ -26,9 +26,13 @@ section#landing {
         /* Firefox */
         -ms-user-select: none;
         /* IE10+ */
-        h5 {
-            color: $brand-inverse;
-            font-size: 1em;
+        h5#phrase {
+            position: absolute;
+            top: 100px;
+            left: 230px;
+            font-weight: lighter;
+            color: rgba($brand-inverse,.5);
+            font-size: .8em;
         }
     }
     section#services {

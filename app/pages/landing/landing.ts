@@ -42,8 +42,10 @@ export class Landing {
         let self = this;
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
-              self.formData = {};
-              self.showForm = false;
+                self.formData = {};
+                self.showForm = false;
+                self.showSuccess = true;
+                setTimeout(function() { self.showSuccess = false }, 3000);
             }
         }
         xhr.open('POST', 'http://otb-api.herokuapp.com/api/email/plain', true);
