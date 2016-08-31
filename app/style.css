@@ -4600,10 +4600,10 @@ a.text-primary:focus, a.text-primary:hover {
 a.text-success:focus, a.text-success:hover {
   color: #5fff32; }
 
-.text-info {
+.text-info, #loading-container #loading {
   color: #493548 !important; }
 
-a.text-info:focus, a.text-info:hover {
+a.text-info:focus, #loading-container a#loading:focus, a.text-info:hover, #loading-container a#loading:hover {
   color: #2b202b; }
 
 .text-warning {
@@ -4713,7 +4713,7 @@ body,
 html {
   max-width: 100% !important; }
 
-body .center, body footer p {
+body .center, body footer p, body #loading-container #loading, #loading-container body #loading {
   text-align: center;
   margin: auto;
   display: block; }
@@ -4735,9 +4735,6 @@ body footer {
   padding: 40px 10px; }
   body footer p {
     color: #f4fffd; }
-
-body .brand-info {
-  color: #493548 !important; }
 
 body .brand-primary-bg {
   background-color: #87ff65; }
@@ -4769,6 +4766,9 @@ body .highlight {
 body .text-dark {
   color: #222; }
 
+body .text-light {
+  color: #f4fffd; }
+
 body .weight-500 {
   font-weight: 500 !important; }
 
@@ -4776,6 +4776,9 @@ body .modal.toast .modal-dialog {
   margin-top: 30%; }
   body .modal.toast .modal-dialog .modal-content {
     border: 0; }
+
+body .card {
+  border: 0 !important; }
 
 section#landing .card {
   padding: 10px 20px;
@@ -4795,6 +4798,9 @@ section#landing #landing-header {
   /* Firefox */
   -ms-user-select: none;
   /* IE10+ */ }
+  section#landing #landing-header:hover h1, section#landing #landing-header:hover h5 {
+    border-left: 2px solid #87ff65;
+    padding-left: 10px; }
   section#landing #landing-header h1, section#landing #landing-header a {
     color: #f4fffd; }
   section#landing #landing-header h5#phrase {
@@ -4811,12 +4817,19 @@ section#landing section#services header {
   section#landing section#services header h5 {
     color: #222; }
 
-section#landing header:hover h1, section#landing header:hover h5 {
-  border-left: 2px solid #87ff65;
-  padding-left: 10px; }
-
 section#landing #pen {
   color: #493548; }
 
 section#landing footer p {
   color: #5a5a66; }
+
+body {
+  background-color: #f15025; }
+
+#loading-container {
+  background-color: #5a5a66 !important;
+  background-color: purple !important;
+  width: 100%;
+  height: 100%; }
+  #loading-container #loading {
+    margin-top: 30% !important; }

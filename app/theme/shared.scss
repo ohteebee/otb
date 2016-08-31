@@ -16,8 +16,6 @@ html {
       text-transform: uppercase;
       font-weight: 500 !important;
     }
-
-
 }
 body,
 html {
@@ -48,9 +46,6 @@ body {
             @extend .center;
             color: $light;
         }
-    }
-    .brand-info {
-        color: $brand-info !important;
     }
     .brand-primary-bg {
         background-color: $brand-primary;
@@ -84,6 +79,9 @@ body {
     .text-dark {
         color: $black;
     }
+    .text-light {
+      color: $light;
+    }
     .weight-500 {
       font-weight: 500 !important;
     }
@@ -95,5 +93,8 @@ body {
                 border: 0;
             }
         }
+    }
+    .card {
+      border: 0 !important;
     }
 }
