@@ -68,9 +68,11 @@ body {
         }
     }
     .btn-big {
-        padding: 20px 40px;
+        // padding: 20px 40px;
+        @extend .p-x-3;
+        @extend .p-y-2;
         &:hover {
-            background-color: transparent;
+            // background-color: transparent;
         }
     }
     .mega-octicon {

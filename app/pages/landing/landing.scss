@@ -27,7 +27,7 @@ section#landing {
     #landing-header {
       &:hover {
           h1, h5 {
-              border-left: 2px solid $brand-primary;
+              border-left: 2px solid $brand-danger;
               padding-left: 10px;
           }
       }
@@ -63,9 +63,6 @@ section#landing {
         }
     }
 
-    #pen {
-        color: $brand-info;
-    }
     footer {
 
       p {

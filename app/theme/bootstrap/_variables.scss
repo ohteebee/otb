@@ -318,7 +318,7 @@ $input-padding-x:                .75rem !default;
 $input-padding-y:                .5rem !default;
 $input-line-height:              1.25 !default;
 
-$input-bg:                       #fff !default;
+$input-bg:                       $gray-lightest !default;
 $input-bg-disabled:              $gray-lighter !default;
 
 $input-color:                    $gray !default;
@@ -331,8 +331,8 @@ $input-border-radius-lg:         $border-radius-lg !default;
 $input-border-radius-sm:         $border-radius-sm !default;
 
 $input-bg-focus:                 $input-bg;
-$input-border-focus:             #66afe9 !default;
-$input-box-shadow-focus:         rgba(102,175,233,.6) !default;
+$input-border-focus:             $brand-info !default;
+$input-box-shadow-focus:         rgba($brand-info,.6) !default;
 $input-color-focus:              $input-color;
 
 $input-color-placeholder:        #999 !default;
