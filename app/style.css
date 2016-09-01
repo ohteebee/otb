@@ -4791,7 +4791,7 @@ section#landing #landing-header-mobile {
   top: 0;
   width: auto;
   z-index: 99999;
-  background-color: #f15025 !important; }
+  background-color: rgba(241, 80, 37, 0.6) !important; }
   section#landing #landing-header-mobile img {
     height: 60px;
     width: auto; }

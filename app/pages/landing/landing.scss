@@ -17,7 +17,7 @@ section#landing {
     top: 0;
     width: auto;
     z-index: 99999;
-    background-color: $brand-danger !important;
+    background-color: rgba($brand-danger,.6) !important;
 
     img {
       height: 60px;
