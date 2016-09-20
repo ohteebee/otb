@@ -10,16 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
+var router_1 = require('@angular/router');
 require('rxjs/add/operator/toPromise');
 var http_2 = require('@angular/http');
 // import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
 var ConstantContact = (function () {
-    function ConstantContact(http) {
+    function ConstantContact(http, router) {
         this.http = http;
+        this.router = router;
         this.items = [];
-        this.data = { name: '', email: '', about: '' };
+        this.data = {};
+        this.questions = [
+            "Where was your first Job?",
+            "What was your first phone number?",
+            "What was your first teacher's name?",
+            "Who was your best childhood friend?",
+            "What is your father's middle name?"
+        ];
         this.showSuccess = false;
+        this.showError = false;
         // this.testing = af.database.list('items');
+        this.router = router_1.Router;
         this.resetData();
     }
     ConstantContact.prototype.sendForm = function () {
@@ -30,10 +41,15 @@ var ConstantContact = (function () {
         this.http.post('https://otb-api.herokuapp.com/api/email/plain', data)
             .toPromise()
             .then(function (res) {
-            console.log(res.json());
-            self.resetData();
-            self.showSuccess = true;
-            setTimeout(function () { self.showSuccess = false; }, 3000);
+            res = res.json();
+            console.log(res);
+            if (res.success < 0) {
+                self.showError = true;
+                setTimeout(function () { self.showError = false; }, 4000);
+            }
+            else {
+                self.showSuccess = true;
+            }
         })
             .catch(self.handleError);
         //
@@ -42,19 +58,27 @@ var ConstantContact = (function () {
         console.log('error sending form');
     };
     ConstantContact.prototype.makeMessage = function () {
-        var msg = 'Email: ' + this.data.email + '\nAbout: ' + this.data.about
-            + '\nFrom: ' + this.data.name;
+        var msg = this.data.organization + '\n' + this.data.website + '\n' +
+            this.data.name + '\n' + this.data.email + '\n' + this.questions[this.data.security.question] + ' -> ' + this.data.security.answer;
         return msg;
     };
     ConstantContact.prototype.resetData = function () {
-        this.data = { name: '', email: '', about: '' };
+        this.data = { website: '', organization: '', name: '', email: '', security: { question: '-1', answer: '' } };
+    };
+    ConstantContact.prototype.test = function (q) {
+        console.log(q);
+        this.data.security.question = q;
+    };
+    ConstantContact.prototype.dismiss = function () {
+        this.showSuccess = false;
+        this.resetData();
     };
     ConstantContact = __decorate([
         core_1.Component({
             selector: 'constant-contact',
             templateUrl: 'app/pages/constant-contact/constant-contact.html'
         }), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [http_1.Http, router_1.Router])
     ], ConstantContact);
     return ConstantContact;
 }());

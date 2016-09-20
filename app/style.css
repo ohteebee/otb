@@ -1,4 +1,3 @@
-
 @import 'https://fonts.googleapis.com/css?family=Ubuntu:300,400,500';
 html {
   font-family: sans-serif;
@@ -4594,7 +4593,9 @@ a.text-primary:focus, a.text-primary:hover {
 a.text-success:focus, a.text-success:hover {
   color: #5fff32; }
 
-.text-info, #loading-container #loading {
+.text-info, section#constant-contact h2,
+section#constant-contact label,
+section#constant-contact p, #loading-container #loading {
   color: #493548 !important; }
 
 a.text-info:focus, #loading-container a#loading:focus, a.text-info:hover, #loading-container a#loading:hover {
@@ -4758,7 +4759,7 @@ body .highlight {
 body .text-dark {
   color: #222 !important; }
 
-body .text-light {
+body .text-light, body section#constant-contact small, section#constant-contact body small {
   color: #f4fffd; }
 
 body .weight-500 {
@@ -4789,6 +4790,9 @@ section#landing section#services header {
   section#landing section#services header h5 {
     color: #222; }
 
+section#constant-contact p.text-light {
+  color: #f4fffd !important; }
+
 #landing-header-mobile {
   position: fixed;
   top: 0;
@@ -4804,11 +4808,8 @@ section#landing section#services header {
   cursor: hand;
   background-color: #222;
   -webkit-user-select: none;
-  /* Chrome/Safari */
   -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+ */ }
+  -ms-user-select: none; }
   #landing-header:hover h1,
   #landing-header:hover h5 {
     border-left: 2px solid #f15025;

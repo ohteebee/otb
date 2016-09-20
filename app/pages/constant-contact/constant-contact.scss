@@ -1,0 +1,13 @@
+section#constant-contact {
+    h2,
+    label,
+    p {
+        @extend .text-info;
+    }
+    small {
+      @extend .text-light;
+    }
+    p.text-light {
+      color: $light !important;
+    }
+}
