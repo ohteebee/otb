@@ -16,7 +16,7 @@ export class ConstantContact {
   showSuccess: boolean = false;
   constructor(private http: Http) {
     // this.testing = af.database.list('items');
-    this.resetData()
+    this.resetData();
   }
 
   sendForm() {
@@ -33,9 +33,12 @@ export class ConstantContact {
           setTimeout(function() { self.showSuccess = false }, 3000);
         }
       )
-        .catch(this.handleError);
+        .catch(self.handleError);
     //
 
+  }
+  handleError() {
+    console.log('error sending form');
   }
   makeMessage() {
       let msg = 'Email: ' + this.data.email + '\nAbout: ' + this.data.about

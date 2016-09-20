@@ -35,8 +35,11 @@ var ConstantContact = (function () {
             self.showSuccess = true;
             setTimeout(function () { self.showSuccess = false; }, 3000);
         })
-            .catch(this.handleError);
+            .catch(self.handleError);
         //
+    };
+    ConstantContact.prototype.handleError = function () {
+        console.log('error sending form');
     };
     ConstantContact.prototype.makeMessage = function () {
         var msg = 'Email: ' + this.data.email + '\nAbout: ' + this.data.about
