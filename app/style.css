@@ -4786,17 +4786,23 @@ section#landing .card {
   section#landing .card h1, section#landing .card h5, section#landing .card p {
     color: #f4fffd !important; }
 
-section#landing #landing-header-mobile {
+section#landing section#services header {
+  text-align: center; }
+  section#landing section#services header h2,
+  section#landing section#services header h5 {
+    color: #222; }
+
+#landing-header-mobile {
   position: fixed;
   top: 0;
   width: auto;
   z-index: 99999;
   background-color: rgba(241, 80, 37, 0.6) !important; }
-  section#landing #landing-header-mobile img {
+  #landing-header-mobile img {
     height: 60px;
     width: auto; }
 
-section#landing #landing-header {
+#landing-header {
   padding: 40px;
   cursor: hand;
   background-color: #222;
@@ -4806,27 +4812,23 @@ section#landing #landing-header {
   /* Firefox */
   -ms-user-select: none;
   /* IE10+ */ }
-  section#landing #landing-header:hover h1, section#landing #landing-header:hover h5 {
+  #landing-header:hover h1,
+  #landing-header:hover h5 {
     border-left: 2px solid #f15025;
     padding-left: 10px; }
-  section#landing #landing-header h1, section#landing #landing-header a {
+  #landing-header a,
+  #landing-header h1 {
     color: #f4fffd; }
-  section#landing #landing-header h5#phrase {
+  #landing-header h5#phrase {
     position: absolute;
     top: 100px;
     left: 230px;
     font-weight: lighter;
     color: rgba(90, 90, 102, 0.5);
-    font-size: .8em; }
+    font-size: 0.8em; }
 
-section#landing section#services header {
-  text-align: center; }
-  section#landing section#services header h2,
-  section#landing section#services header h5 {
-    color: #222; }
-
-section#landing footer p {
-  color: #5a5a66; }
+footer p {
+  color: #5a5a66 !important; }
 
 body {
   background-color: #f15025; }

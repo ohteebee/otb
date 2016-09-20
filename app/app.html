@@ -1,2 +1,24 @@
+<header class="hand hidden-sm-down" (click)="change()" id="landing-header">
+    <a href="#" routerLink="/"><img src="otb-logo.png"/></a>
+    <h5 id="phrase">{{phrase}}</h5>
+</header>
 
-<landing></landing>
+<header class="hand hidden-md-up" (click)="change()" id="landing-header-mobile">
+    <!-- <span class="mega-octicon octicon-triangle-down"></span> -->
+    <a href="#"><img src="otb-logo.png"/></a>
+</header>
+<router-outlet></router-outlet>
+<footer id="copyright">
+    <p>&copy;2016 OTB. All rights reserved.</p>
+    <p>
+        OTB
+        <br/>
+        HQ in Greenville, SC
+        <br/>
+        (970) 372-9900
+        <br/>
+        jonathan@otb.zone
+        <br/>
+        brett@otb.zone
+    </p>
+</footer>

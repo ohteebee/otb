@@ -9,17 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var index_1 = require('./pages/index');
+var router_1 = require('@angular/router');
 var App = (function () {
-    function App() {
+    function App(router) {
+        this.router = router;
+        this.phrases = ['Outside the box...', 'On the ball...', 'On the brink...', 'Only the best...', 'On the bridge...', 'Occasional total brilliance...'];
+        this.index = 0;
+        this.phrase = '';
+        this.phrase = this.phrases[this.index];
+        this.router = router;
     }
+    App.prototype.change = function () {
+        if (this.index === this.phrases.length - 1) {
+            this.index = 0;
+        }
+        else {
+            this.index++;
+        }
+        this.phrase = this.phrases[this.index];
+    };
     App = __decorate([
         core_1.Component({
             selector: 'my-app',
-            templateUrl: 'app/app.html',
-            directives: [index_1.Landing]
+            templateUrl: 'app/app.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], App);
     return App;
 }());

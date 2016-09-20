@@ -8,12 +8,12 @@ import {Component} from '@angular/core';
 export class Landing {
     email: string = '';
     showForm: boolean = false;
-    phrases: string[] = ['Outside the box...', 'On the ball...', 'On the brink...', 'Only the best...', 'On the bridge...', 'Occasional total brilliance...'];
+
     phrase: string = '';
-    formData: any = {};
-    index: number = 0;
+    formData: any = {name: '', email: '', about: ''};
+    showSuccess: boolean = false;
     constructor() {
-        this.phrase = this.phrases[this.index];
+
         // while (true) {
         //     setTimeout(function() {
         //         console.log(this.index);
@@ -28,14 +28,7 @@ export class Landing {
         //     }, 500);
         // }
     }
-    change() {
-        if (this.index === this.phrases.length - 1) {
-            this.index = 0;
-        } else {
-            this.index++;
-        }
-        this.phrase = this.phrases[this.index];
-    }
+
 
     sendForm() {
         let xhr = new XMLHttpRequest();

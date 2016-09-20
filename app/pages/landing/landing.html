@@ -1,21 +1,9 @@
 <section id="landing">
-    <header class="hand hidden-sm-down" (click)="change()" id="landing-header">
-        <img src="otb-logo.png"/>
-
-        <h5 id="phrase">{{phrase}}</h5>
-    </header>
-
-    <header class="hand hidden-md-up" (click)="change()" id="landing-header-mobile">
-        <!-- <span class="mega-octicon octicon-triangle-down"></span> -->
-        <a href="#"><img src="otb-logo.png"/></a>
-
-    </header>
     <section class="wrapper" id="services">
         <div class="container">
             <header class="center">
                 <h1 class="text-info">Services</h1>
             </header>
-
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card">
@@ -23,27 +11,24 @@
                             <h3 class="center">Hybrid App Development</h3>
                             <span class="center text-muted">Launch off fast</span>
                             <span class="p-a-1 mega-octicon octicon-rocket text-danger"></span>
-
                         </header>
-
                         <p>Our team specializes in modern javascript development. Leveraging tools like Cordova and Electron we can craft high quality mobile, desktop and web apps with tremendous code share. This results in higher quality apps in a fractions of the time it
                             takes to ramp up unique code bases for each platform you wish to target.</p>
+                        <p>
+                            Custom built just for you, everything you want, nothing you don't. Trust us, we love cookies, but skip those cookie cutter solutions. If you want your app to stand out from the pack, you are in the right place! We take the time to understand your
+                            needs and come up with the best solution for the job at hand.
+                        </p>
 
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
                         <header>
-                            <h3 class="center">Custom Built Apps</h3>
-
-                            <span class="center text-muted">Like a match made in heaven</span>
-                            <span class="p-a-1 mega-octicon octicon-beaker text-danger"></span>
-
+                            <h3 class="center">Graphic Design</h3>
+                            <span class="center text-muted">Dreams should be beautiful</span>
+                            <span class="p-a-1 mega-octicon octicon-paintcan text-danger"></span>
                         </header>
-
-                        <p>Built for you, everything you want, nothing you don't. Trust us, we love cookies, but skip those cookie cutter solutions. If you want your app to stand out from the pack, you are in the right place! We take the time to understand your needs and
-                            come up with the best solution for the job at hand.</p>
-
+                        <p>Graphic design is way more than making a “pretty billboard” or playing around with Photoshop all day.” It is a way to reach consumers of all ages, colors and backgrounds. Graphic design allows us to reach consumers by increasing brand awareness as well as helping to form last relations between consumers and businesses. As elementary as it may sound, visual communication simplifies life.</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -56,10 +41,9 @@
 
                         </header>
 
-                        <p>Does your team use a CMS or any other tools internally? Chances are we can take your integrations to the next level to streamline your business by maximizing your productivity.</p>
+                        <p>Does your team use a CMS, CRM or Online Accounting Tool? Chances are we can take your integrations to the next level to streamline your business by maximizing your productivity.</p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -89,15 +73,15 @@
                     <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">What is your name?</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jane Doe" [(ngModel)]="formData.name">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your name" [value]="formData.name" (input)="formData.name=$event.target.value">
                         </div>
                         <div class="form-group">
                             <label for="contactInput">How can we reach you?</label>
-                            <input type="text" class="form-control" id="contactInput" placeholder="abc@123.com" [(ngModel)]="formData.email">
+                            <input type="text" class="form-control" id="contactInput" placeholder="your email or phone" [value]="formData.email" (input)="formData.email=$event.target.value">
                         </div>
                         <div class="form-group">
                             <label for="aboutInput">Tell us about your project?</label>
-                            <textarea class="form-control" id="aboutInput" rows="4" [(ngModel)]="formData.about"></textarea>
+                            <textarea class="form-control" id="aboutInput" rows="4" placeholder="your project" [value]="formData.about" (input)="formData.about=$event.target.value"></textarea>
                         </div>
                         <button type="submit" class="btn btn-outline-danger btn-block p-a-1" (click)="sendForm()">Submit</button>
                     </form>
@@ -115,19 +99,4 @@
             </div>
         </div>
     </aside>
-    <footer id="copyright">
-        <p>&copy;2016 OTB. All rights reserved.</p>
-        <p>
-            OTB
-            <br/>
-            HQ in Greenville, SC
-            <br/>
-            (970) 372-9900
-            <br/>
-            jonathan@otb.zone
-            <br/>
-            brett@otb.zone
-        </p>
-    </footer>
-
 </section>

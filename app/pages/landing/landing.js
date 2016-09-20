@@ -13,11 +13,9 @@ var Landing = (function () {
     function Landing() {
         this.email = '';
         this.showForm = false;
-        this.phrases = ['Outside the box...', 'On the ball...', 'On the brink...', 'Only the best...', 'On the bridge...', 'Occasional total brilliance...'];
         this.phrase = '';
-        this.formData = {};
-        this.index = 0;
-        this.phrase = this.phrases[this.index];
+        this.formData = { name: '', email: '', about: '' };
+        this.showSuccess = false;
         // while (true) {
         //     setTimeout(function() {
         //         console.log(this.index);
@@ -32,15 +30,6 @@ var Landing = (function () {
         //     }, 500);
         // }
     }
-    Landing.prototype.change = function () {
-        if (this.index === this.phrases.length - 1) {
-            this.index = 0;
-        }
-        else {
-            this.index++;
-        }
-        this.phrase = this.phrases[this.index];
-    };
     Landing.prototype.sendForm = function () {
         var xhr = new XMLHttpRequest();
         var self = this;
