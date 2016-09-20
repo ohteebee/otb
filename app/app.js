@@ -17,7 +17,6 @@ var App = (function () {
         this.index = 0;
         this.phrase = '';
         this.phrase = this.phrases[this.index];
-        this.router = router;
     }
     App.prototype.change = function () {
         if (this.index === this.phrases.length - 1) {

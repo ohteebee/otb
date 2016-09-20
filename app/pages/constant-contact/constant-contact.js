@@ -30,32 +30,46 @@ var ConstantContact = (function () {
         this.showSuccess = false;
         this.showError = false;
         // this.testing = af.database.list('items');
-        this.router = router_1.Router;
         this.resetData();
     }
     ConstantContact.prototype.sendForm = function () {
-        var data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
-        var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
-        var options = new http_2.RequestOptions({ headers: headers });
-        var self = this;
-        this.http.post('https://otb-api.herokuapp.com/api/email/plain', data)
-            .toPromise()
-            .then(function (res) {
-            res = res.json();
-            console.log(res);
-            if (res.success < 0) {
-                self.showError = true;
-                setTimeout(function () { self.showError = false; }, 4000);
-            }
-            else {
-                self.showSuccess = true;
-            }
-        })
-            .catch(self.handleError);
+        if (this.validate()) {
+            var data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
+            var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
+            var options = new http_2.RequestOptions({ headers: headers });
+            var self_1 = this;
+            this.http.post('https://otb-api.herokuapp.com/api/email/plain', data)
+                .toPromise()
+                .then(function (res) {
+                res = res.json();
+                console.log(res);
+                if (res.success < 0) {
+                    self_1.displayError();
+                }
+                else {
+                    self_1.showSuccess = true;
+                }
+            })
+                .catch(self_1.handleError);
+        }
+        else {
+            this.displayError();
+        }
         //
+    };
+    ConstantContact.prototype.displayError = function () {
+        this.showError = true;
+        var self = this;
+        setTimeout(function () { self.showError = false; }, 4000);
     };
     ConstantContact.prototype.handleError = function () {
         console.log('error sending form');
+    };
+    ConstantContact.prototype.validate = function () {
+        if ((this.data.email).length && (this.data.name).length && (this.data.security.answer).length) {
+            return true;
+        }
+        return false;
     };
     ConstantContact.prototype.makeMessage = function () {
         var msg = this.data.organization + '\n' + this.data.website + '\n' +

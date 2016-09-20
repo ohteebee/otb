@@ -24,14 +24,14 @@ export class ConstantContact {
   ];
   showSuccess: boolean = false;
   showError: boolean = false;
-  router: Router;
   constructor(private http: Http, private router: Router) {
     // this.testing = af.database.list('items');
-    this.router = Router;
     this.resetData();
   }
 
   sendForm() {
+    if (this.validate()) {
+
     let data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
@@ -42,8 +42,7 @@ export class ConstantContact {
           res = res.json();
           console.log(res);
           if (res.success < 0) {
-            self.showError = true;
-            setTimeout(function() { self.showError = false }, 4000);
+            self.displayError();
 
           } else {
             self.showSuccess = true;
@@ -51,11 +50,27 @@ export class ConstantContact {
         }
       )
         .catch(self.handleError);
+      } else {
+        this.displayError();
+      }
+
     //
 
   }
+  displayError() {
+    this.showError = true;
+    var self = this;
+    setTimeout(function() { self.showError = false }, 4000);
+  }
   handleError() {
     console.log('error sending form');
+  }
+  validate():boolean {
+    if ((this.data.email).length && (this.data.name).length && (this.data.security.answer).length) {
+      return true;
+    }
+    return false;
+
   }
   makeMessage() {
       let msg = this.data.organization + '\n' + this.data.website + '\n' +
