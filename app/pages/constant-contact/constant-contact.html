@@ -2,7 +2,6 @@
     <h4 class="modal-title">Constant Contact</h4>
 </header>
 
-<form>
     <div class="form-group">
         <label>What is your name?</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your name" [value]="data.name" (input)="data.name=$event.target.value">
@@ -15,8 +14,8 @@
         <label>Tell us about your project?</label>
         <textarea class="form-control" id="aboutInput" rows="4" placeholder="your project" [value]="data.about" (input)="data.about=$event.target.value"></textarea>
     </div>
-    <button type="submit" class="btn btn-outline-danger btn-block p-a-1" (click)="sendForm()">Submit</button>
-</form>
+    <button class="btn btn-outline-danger btn-block p-a-1" (click)="sendForm()">Submit</button>
+
 <aside class="modal toast" role="dialog" *ngIf="showSuccess">
     <div class="modal-dialog modal-md">
         <div class="modal-content p-a-2 bg-danger center">

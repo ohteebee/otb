@@ -2,7 +2,7 @@
     <section class="wrapper" id="services">
         <div class="container">
             <header class="center">
-                <h1 class="text-info">Services</h1>
+                <h1 class="text-info">Solutions</h1>
             </header>
             <div class="row">
                 <div class="col-lg-4">
@@ -12,13 +12,8 @@
                             <span class="center text-muted">Launch off fast</span>
                             <span class="p-a-1 mega-octicon octicon-rocket text-danger"></span>
                         </header>
-                        <p>Our team specializes in modern javascript development. Leveraging tools like Cordova and Electron we can craft high quality mobile, desktop and web apps with tremendous code share. This results in higher quality apps in a fractions of the time it
-                            takes to ramp up unique code bases for each platform you wish to target.</p>
-                        <p>
-                            Custom built just for you, everything you want, nothing you don't. Trust us, we love cookies, but skip those cookie cutter solutions. If you want your app to stand out from the pack, you are in the right place! We take the time to understand your
-                            needs and come up with the best solution for the job at hand.
-                        </p>
-
+                        <p>Leveraging modern technologies, our team crafts high quality mobile, desktop and web apps with tremendous code share. This allows us to get your app rolled out on multiple platforms in fractions of the time.</p>
+                        <p>Custom built for you, everything you want, nothing you don't. Trust us, we love cookies, but skip those cookie cutter solutions. If you want your app to stand out from the pack, you are in the right place! We take the time to understand your needs and come up with the best solution for the job at hand.</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -33,14 +28,11 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="card">
-
                         <header>
                             <h3 class="center">Integrations</h3>
                             <span class="center text-muted">We've got you covered</span>
                             <span class="p-a-1 mega-octicon octicon-plug text-danger"></span>
-
                         </header>
-
                         <p>Does your team use a CMS, CRM or Online Accounting Tool? Chances are we can take your integrations to the next level to streamline your business by maximizing your productivity.</p>
                     </div>
                 </div>
@@ -70,7 +62,6 @@
                     <h4 class="modal-title">We look forward to working with you!</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
                         <div class="form-group">
                             <label for="exampleInputEmail1">What is your name?</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="your name" [value]="formData.name" (input)="formData.name=$event.target.value">
@@ -83,8 +74,7 @@
                             <label for="aboutInput">Tell us about your project?</label>
                             <textarea class="form-control" id="aboutInput" rows="4" placeholder="your project" [value]="formData.about" (input)="formData.about=$event.target.value"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-outline-danger btn-block p-a-1" (click)="sendForm()">Submit</button>
-                    </form>
+                        <button class="btn btn-outline-danger btn-block p-a-1" (click)="sendForm()">Submit</button>
                 </div>
             </div>
         </div>

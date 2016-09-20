@@ -1,36 +1,48 @@
 import {Component} from '@angular/core';
 
+import { Http, Response } from '@angular/http';
+
+import 'rxjs/add/operator/toPromise';
+import { Headers, RequestOptions } from '@angular/http';
+// import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
 
 @Component({
     selector: 'constant-contact',
     templateUrl: 'app/pages/constant-contact/constant-contact.html'
 })
 export class ConstantContact {
+  items: any = [];
   data: any = {name: '', email: '', about: ''};
   showSuccess: boolean = false;
-  constructor() {
-    this.data = {name: '', email: '', about: ''};
+  constructor(private http: Http) {
+    // this.testing = af.database.list('items');
+    this.resetData()
   }
 
-  sendForm():void {
-    let xhr = new XMLHttpRequest();
+  sendForm() {
+    let data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
     let self = this;
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
-            self.data = {};
-            self.showSuccess = true;
-            setTimeout(function() { self.showSuccess = false }, 3000);
+    this.http.post('https://otb-api.herokuapp.com/api/email/plain', data)
+        .toPromise()
+        .then(res => {
+          console.log(res.json());
+          self.resetData();
+          self.showSuccess = true;
+          setTimeout(function() { self.showSuccess = false }, 3000);
         }
-    }
-    xhr.open('POST', 'http://otb-api.herokuapp.com/api/email/plain', true);
-    xhr.setRequestHeader('Content-type', 'application/json');
-    var data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
-    xhr.send(JSON.stringify(data));
+      )
+        .catch(this.handleError);
+    //
 
   }
   makeMessage() {
       let msg = 'Email: ' + this.data.email + '\nAbout: ' + this.data.about
           + '\nFrom: ' + this.data.name;
       return msg;
+  }
+  resetData() {
+    this.data = {name: '', email: '', about: ''};
   }
 }

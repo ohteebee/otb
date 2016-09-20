@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Landing } from './pages/index';
 import { Router } from '@angular/router';
-
+import { Landing } from './pages/index';
 
 @Component({
     selector: 'my-app',
@@ -23,6 +22,5 @@ export class App {
             this.index++;
         }
         this.phrase = this.phrases[this.index];
-
     }
 }

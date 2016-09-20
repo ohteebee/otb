@@ -1,10 +1,4 @@
-/*!
- * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
- * Copyright 2011-2016 The Bootstrap Authors
- * Copyright 2011-2016 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-/*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
+
 @import 'https://fonts.googleapis.com/css?family=Ubuntu:300,400,500';
 html {
   font-family: sans-serif;
@@ -4785,6 +4779,9 @@ section#landing .card {
     color: #f4fffd; }
   section#landing .card h1, section#landing .card h5, section#landing .card p {
     color: #f4fffd !important; }
+  section#landing .card p {
+    text-align: justify;
+    text-justify: inter-word !important; }
 
 section#landing section#services header {
   text-align: center; }

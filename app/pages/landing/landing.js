@@ -9,13 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/toPromise');
+var http_2 = require('@angular/http');
 var Landing = (function () {
-    function Landing() {
+    function Landing(http) {
+        this.http = http;
         this.email = '';
         this.showForm = false;
         this.phrase = '';
         this.formData = { name: '', email: '', about: '' };
         this.showSuccess = false;
+        //   this.sendForm()
+        // .then(hero => {
+        //   console.log(hero);
+        // });;
         // while (true) {
         //     setTimeout(function() {
         //         console.log(this.index);
@@ -31,32 +39,49 @@ var Landing = (function () {
         // }
     }
     Landing.prototype.sendForm = function () {
-        var xhr = new XMLHttpRequest();
-        var self = this;
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                self.formData = {};
-                self.showForm = false;
-                self.showSuccess = true;
-                setTimeout(function () { self.showSuccess = false; }, 3000);
-            }
-        };
-        xhr.open('POST', 'http://otb-api.herokuapp.com/api/email/plain', true);
-        xhr.setRequestHeader('Content-type', 'application/json');
         var data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
-        xhr.send(JSON.stringify(data));
+        var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_2.RequestOptions({ headers: headers });
+        var self = this;
+        return this.http.post('https://otb-api.herokuapp.com/api/email/plain', data)
+            .toPromise()
+            .then(function (res) {
+            console.log(res.json());
+            self.showForm = false;
+            self.resetData();
+            self.showSuccess = true;
+            setTimeout(function () { self.showSuccess = false; }, 3000);
+        })
+            .catch(this.handleError);
+        //
+    };
+    Landing.prototype.extractData = function (res) {
+        var body = res.json();
+        alert(JSON.stringify(body));
+        return body.data || {};
+    };
+    Landing.prototype.handleError = function (error) {
+        // In a real world app, we might use a remote logging infrastructure
+        // We'd also dig deeper into the error to get a better message
+        var errMsg = (error.message) ? error.message :
+            error.status ? error.status + " - " + error.statusText : 'Server error';
+        console.error(errMsg); // log to console instead
+        return Promise.reject(errMsg);
     };
     Landing.prototype.makeMessage = function () {
         var msg = 'Email: ' + this.formData.email + '\nAbout: ' + this.formData.about
             + '\nFrom: ' + this.formData.name;
         return msg;
     };
+    Landing.prototype.resetData = function () {
+        this.formData = { name: '', email: '', about: '' };
+    };
     Landing = __decorate([
         core_1.Component({
             selector: 'landing',
             templateUrl: 'app/pages/landing/landing.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], Landing);
     return Landing;
 }());

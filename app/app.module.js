@@ -11,14 +11,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var index_1 = require('./pages/index');
+var http_1 = require('@angular/http');
 var app_1 = require('./app');
+// import { AngularFireModule } from 'angularfire2';
 var app_routing_1 = require('./app.routing');
+exports.firebaseConfig = {
+    apiKey: "AIzaSyAfCjnNMucQ4jskblhB_qed6Wo_1pCkoDw",
+    authDomain: "store-72082.firebaseapp.com",
+    databaseURL: "https://store-72082.firebaseio.com",
+    storageBucket: "store-72082.appspot.com",
+};
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
+            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule],
             declarations: [index_1.Landing, index_1.ConstantContact, app_1.App],
             providers: [app_routing_1.appRoutingProviders],
             bootstrap: [app_1.App]

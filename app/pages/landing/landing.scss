@@ -11,6 +11,10 @@ section#landing {
     h1,h5,p {
       color: $light !important;
     }
+    p {
+        text-align: justify;
+        text-justify: inter-word !important;
+    }
   }
     section#services {
         header {
