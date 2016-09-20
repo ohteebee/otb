@@ -1,11 +1,15 @@
 section#constant-contact {
     h2,
+    h5,
     label,
     p {
         @extend .text-info;
     }
     small {
       @extend .text-light;
+    }
+    .text-light {
+      color:$light !important;
     }
     p.text-light {
       color: $light !important;

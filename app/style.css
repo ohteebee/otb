@@ -4594,6 +4594,7 @@ a.text-success:focus, a.text-success:hover {
   color: #5fff32; }
 
 .text-info, section#constant-contact h2,
+section#constant-contact h5,
 section#constant-contact label,
 section#constant-contact p, #loading-container #loading {
   color: #493548 !important; }
@@ -4789,6 +4790,9 @@ section#landing section#services header {
   section#landing section#services header h2,
   section#landing section#services header h5 {
     color: #222; }
+
+section#constant-contact .text-light, section#constant-contact small {
+  color: #f4fffd !important; }
 
 section#constant-contact p.text-light {
   color: #f4fffd !important; }

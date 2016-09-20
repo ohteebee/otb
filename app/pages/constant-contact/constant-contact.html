@@ -23,9 +23,9 @@
         <input type="text" class="form-control" placeholder="your email address" [value]="data.email" (input)="data.email=$event.target.value">
     </div>
 
-    <h4>Security questions</h4>
+    <h5>Security questions</h5>
     <small>*Choose one to answer</small>
-    <form>
+    <form class="m-b-1">
       <label class="btn btn-outline-secondary d-block text-light">
           <input type="radio" name="security" id="option3" value="0" (change)="test($event.target.value)">
           Where was your first Job?
