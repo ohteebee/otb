@@ -8,4 +8,4 @@ var appRoutes = [
     { path: '', component: index_1.Landing }
 ];
 exports.appRoutingProviders = [];
-exports.routing = router_1.RouterModule.forRoot(appRoutes);
+exports.routing = router_1.RouterModule.forRoot(appRoutes, { useHash: true });

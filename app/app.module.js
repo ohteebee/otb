@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var index_1 = require('./pages/index');
 var http_1 = require('@angular/http');
+// import { Routes, RouterModule } from '@angular/router';
 var app_1 = require('./app');
 // import { AngularFireModule } from 'angularfire2';
 var app_routing_1 = require('./app.routing');
