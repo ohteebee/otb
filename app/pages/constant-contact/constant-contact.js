@@ -20,6 +20,7 @@ var ConstantContact = (function () {
         this.router = router;
         this.items = [];
         this.data = {};
+        this.processing = false;
         this.questions = [
             "Where was your first Job?",
             "What was your first phone number?",
@@ -34,6 +35,7 @@ var ConstantContact = (function () {
     }
     ConstantContact.prototype.sendForm = function () {
         if (this.validate()) {
+            this.processing = true;
             var data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
             var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
             var options = new http_2.RequestOptions({ headers: headers });
@@ -49,6 +51,7 @@ var ConstantContact = (function () {
                 else {
                     self_1.showSuccess = true;
                 }
+                self_1.processing = false;
             })
                 .catch(self_1.handleError);
         }

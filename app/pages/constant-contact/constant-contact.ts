@@ -14,7 +14,7 @@ import { Headers, RequestOptions } from '@angular/http';
 export class ConstantContact {
   items: any = [];
   data: any = {};
-
+  processing: boolean = false;
   questions: any = [
     "Where was your first Job?",
     "What was your first phone number?",
@@ -31,7 +31,7 @@ export class ConstantContact {
 
   sendForm() {
     if (this.validate()) {
-
+      this.processing = true;
     let data = { 'to': 'mierze@gmail.com', 'message': this.makeMessage() };
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
@@ -47,6 +47,7 @@ export class ConstantContact {
           } else {
             self.showSuccess = true;
           }
+          self.processing = false;
         }
       )
         .catch(self.handleError);

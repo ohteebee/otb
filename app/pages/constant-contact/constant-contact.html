@@ -3,8 +3,8 @@
     <h2>Constant Contact Registration</h2>
 
     <div class="form-group">
-        <label>Organizations name</label>
-        <input type="text" class="form-control" placeholder="your organizatons name" [value]="data.organization" (input)="data.organization=$event.target.value">
+        <label>Organization name</label>
+        <input type="text" class="form-control" placeholder="your organizaton name" [value]="data.organization" (input)="data.organization=$event.target.value">
     </div>
 
     <div class="form-group">
@@ -56,7 +56,8 @@
         <label><span class="text-info">*</span>{{questions[data.security.question]}}</label>
         <input type="text" class="form-control" id="contactInput" placeholder="your answer" [value]="data.security.answer" (input)="data.security.answer=$event.target.value">
     </div>
-    <button class="btn btn-outline-info btn-block p-a-1" (click)="sendForm()">Create my account</button>
+    <small class="p-t-2 text-light" *ngIf="processing">Processing.........</small>
+    <button class="btn btn-outline-info btn-block p-a-1" [disabled]="processing" (click)="sendForm()">Create my account</button>
 
     <aside class="modal toast" role="dialog" *ngIf="showSuccess">
         <div class="modal-dialog modal-md">
