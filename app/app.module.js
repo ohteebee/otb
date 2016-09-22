@@ -16,12 +16,6 @@ var http_1 = require('@angular/http');
 var app_1 = require('./app');
 // import { AngularFireModule } from 'angularfire2';
 var app_routing_1 = require('./app.routing');
-exports.firebaseConfig = {
-    apiKey: "AIzaSyAfCjnNMucQ4jskblhB_qed6Wo_1pCkoDw",
-    authDomain: "store-72082.firebaseapp.com",
-    databaseURL: "https://store-72082.firebaseio.com",
-    storageBucket: "store-72082.appspot.com",
-};
 var AppModule = (function () {
     function AppModule() {
     }

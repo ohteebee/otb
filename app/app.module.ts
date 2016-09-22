@@ -8,12 +8,6 @@ import { App } from './app';
 import { routing,
     appRoutingProviders } from './app.routing';
 
-export const firebaseConfig = {
-    apiKey: "AIzaSyAfCjnNMucQ4jskblhB_qed6Wo_1pCkoDw",
-    authDomain: "store-72082.firebaseapp.com",
-    databaseURL: "https://store-72082.firebaseio.com",
-    storageBucket: "store-72082.appspot.com",
-};
 @NgModule({
     imports: [BrowserModule, routing, HttpModule],
     declarations: [Landing, ConstantContact, App],

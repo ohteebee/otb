@@ -43,7 +43,7 @@ var Landing = (function () {
         var headers = new http_2.Headers({ 'Content-Type': 'application/json' });
         var options = new http_2.RequestOptions({ headers: headers });
         var self = this;
-        return this.http.post('https://otb-api.herokuapp.com/api/email/plain', data)
+        return this.http.post('https://otb-api.now.sh/api/email/plain', data)
             .toPromise()
             .then(function (res) {
             console.log(res.json());

@@ -42,7 +42,7 @@ export class Landing {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
         let self = this;
-        return this.http.post('https://otb-api.herokuapp.com/api/email/plain', data)
+        return this.http.post('https://otb-api.now.sh/api/email/plain', data)
             .toPromise()
             .then(res => {
               console.log(res.json());

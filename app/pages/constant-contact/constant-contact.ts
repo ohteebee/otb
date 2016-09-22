@@ -36,7 +36,7 @@ export class ConstantContact {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     let self = this;
-    this.http.post('https://otb-api.herokuapp.com/api/email/plain', data)
+    this.http.post('https://otb-api.now.sh/api/email/plain', data)
         .toPromise()
         .then(res => {
           res = res.json();

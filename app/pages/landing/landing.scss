@@ -1,29 +1,48 @@
 section#landing {
-  .card {
-    padding: $gap 20px;
-    h3, span {
-      color: $light;
+    .solutions {
+        .card {
+            padding: $gap 20px;
+            background-color: rgba($brand-info, 1);
+
+            h3,
+            span {
+                color: $light;
+            }
+
+            span {
+                // color: $brand-inverse;
+            }
+
+            h1,
+            h5,
+            p {
+                color: $light !important;
+            }
+
+            p {
+                text-align: justify;
+                text-justify: inter-word !important;
+            }
+        }
     }
-    background-color: rgba($brand-info, 1);
-    span {
-      // color: $brand-inverse;
+
+    section#team {
+        .card {
+            max-width: 300px !important;
+            word-wrap: normal;
+            @extend .m-a-2;
+            @extend .center;
+        }
     }
-    h1,h5,p {
-      color: $light !important;
-    }
-    p {
-        text-align: justify;
-        text-justify: inter-word !important;
-    }
-  }
+
     section#services {
         header {
             text-align: center;
+
             h2,
             h5 {
                 color: $black;
             }
         }
     }
-
 }
