@@ -4337,7 +4337,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   margin-top: 0 !important;
   margin-bottom: 0 !important; }
 
-.m-a-1 {
+.m-a-1, section#landing section#team .card {
   margin: 1rem 1rem !important; }
 
 .m-t-1 {
@@ -4360,7 +4360,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important; }
 
-.m-a-2, section#landing section#team .card {
+.m-a-2 {
   margin: 1.5rem 1.5rem !important; }
 
 .m-t-2 {
@@ -4732,6 +4732,10 @@ body footer {
   body footer p {
     color: #f4fffd; }
 
+body p {
+  text-align: justify !important;
+  text-justify: inter-word !important; }
+
 body .brand-primary-bg {
   background-color: #87ff65; }
 
@@ -4760,14 +4764,14 @@ body .highlight {
 body .text-dark {
   color: #222 !important; }
 
-body .text-light, body section#constant-contact small, section#constant-contact body small {
+body .text-light, body section#landing section#team .card .card-title, section#landing section#team .card body .card-title, body section#constant-contact small, section#constant-contact body small {
   color: #f4fffd; }
 
 body .weight-500 {
   font-weight: 500 !important; }
 
 body .modal.toast .modal-dialog {
-  margin-top: 30%; }
+  margin-top: 20%; }
   body .modal.toast .modal-dialog .modal-content {
     border: 0; }
 
@@ -4784,13 +4788,11 @@ section#landing .solutions .card {
   section#landing .solutions .card h5,
   section#landing .solutions .card p {
     color: #f4fffd !important; }
-  section#landing .solutions .card p {
-    text-align: justify;
-    text-justify: inter-word !important; }
 
 section#landing section#team .card {
-  max-width: 300px !important;
   word-wrap: normal; }
+  section#landing section#team .card p.card-text {
+    text-align: left; }
 
 section#landing section#services header {
   text-align: center; }
@@ -4798,10 +4800,10 @@ section#landing section#services header {
   section#landing section#services header h5 {
     color: #222; }
 
-section#constant-contact .text-light, section#constant-contact small {
+section#constant-contact .text-light, section#constant-contact section#landing section#team .card .card-title, section#landing section#team .card section#constant-contact .card-title, section#constant-contact small {
   color: #f4fffd !important; }
 
-section#constant-contact p.text-light {
+section#constant-contact p.text-light, section#constant-contact section#landing section#team .card p.card-title, section#landing section#team .card section#constant-contact p.card-title {
   color: #f4fffd !important; }
 
 #landing-header-mobile {

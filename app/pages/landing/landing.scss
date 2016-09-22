@@ -19,19 +19,23 @@ section#landing {
                 color: $light !important;
             }
 
-            p {
-                text-align: justify;
-                text-justify: inter-word !important;
-            }
+
         }
     }
 
     section#team {
         .card {
-            max-width: 300px !important;
+            // max-width: 300px !important;
+            .card-title {
+              @extend .text-light;
+            }
             word-wrap: normal;
-            @extend .m-a-2;
+            @extend .m-a-1;
             @extend .center;
+            p.card-text {
+              text-align: left;
+
+            }
         }
     }
 

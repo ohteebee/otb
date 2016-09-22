@@ -47,6 +47,10 @@ body {
             color: $light;
         }
     }
+    p {
+        text-align: justify !important;
+        text-justify: inter-word !important;
+    }
     .brand-primary-bg {
         background-color: $brand-primary;
     }
@@ -92,7 +96,7 @@ body {
     }
     .modal.toast {
         .modal-dialog {
-            margin-top: 30%;
+            margin-top: 20%;
             .modal-content {
 
                 border: 0;

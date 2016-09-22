@@ -4,10 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 
-var app = express();
+var app = express.createServer();
 
 // expose node_modules to client app
-app.use(express.static(__dirname + "/node_modules"));
+// app.use(express.static(__dirname + "/node_modules"));
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -30,15 +30,15 @@ app.use(function(req, res, next) {
 // error handlers
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function(err, req, res, next) {
-        res.status(err.status || 500);
-        res.json({
-            message: err.message,
-            error: err
-        });
-    });
-}
+// if (app.get('env') === 'development') {
+//     app.use(function(err, req, res, next) {
+//         res.status(err.status || 500);
+//         res.json({
+//             message: err.message,
+//             error: err
+//         });
+//     });
+// }
 
 // production error handler
 // no stacktraces leaked to user
@@ -51,9 +51,7 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.set('port', process.env.PORT || 4244);
+// app.set('port', process.env.PORT || 4444);
 
-app.listen(app.get('port'), function() {
-    console.log('Express server listening on port ' + app.get('port'));
-});
+app.listen();
 module.exports = app;

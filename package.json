@@ -1,16 +1,12 @@
 {
-  "name": "angular2-quickstart",
+  "name": "otb-shop",
   "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start2": "concurrently \"sudo npm run tsc:w\" \"sudo npm run lite\" ",
-    "lite": "lite-server",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings",
-    "postinstall": "typings install"
+    "start": "node index.js"
   },
   "extras": {
+    "start2": "concurrently \"sudo npm run tsc:w\" \"sudo npm run lite\" ",
     "star2t": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server",
@@ -20,7 +16,7 @@
     "typings": "typings"
   },
   "engines": {
-    "node": "6.1.0"
+    "node": "6.6.0"
   },
   "license": "ISC",
   "dependencies": {
