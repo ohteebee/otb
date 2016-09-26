@@ -81,8 +81,9 @@ var Landing = (function () {
             selector: 'landing',
             templateUrl: 'app/pages/landing/landing.html'
         }), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [(typeof (_a = typeof http_1.Http !== 'undefined' && http_1.Http) === 'function' && _a) || Object])
     ], Landing);
     return Landing;
+    var _a;
 }());
 exports.Landing = Landing;
