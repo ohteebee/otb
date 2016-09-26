@@ -13,47 +13,50 @@
     </div>
 
     <div class="form-group">
-        <label><span class="text-info">*</span>Full name</label>
+        <label>
+            <span class="text-info">*</span>Full name</label>
         <input type="text" class="form-control" placeholder="your first and last name" [value]="data.name" (input)="data.name=$event.target.value">
     </div>
 
     <div class="form-group">
-        <label><span class="text-info">*</span>Email address</label>
+        <label>
+            <span class="text-info">*</span>Email address</label>
         <small>*Will also be used as your username for Constant Contact</small>
         <input type="text" class="form-control" placeholder="your email address" [value]="data.email" (input)="data.email=$event.target.value">
     </div>
 
     <h5>Security questions</h5>
-    <small><span class="text-info">*</span>Choose one to answer</small>
+    <small>
+        <span class="text-info">*</span>Choose one to answer</small>
     <form class="m-b-1">
-      <label class="btn btn-outline-secondary d-block text-light">
-          <input type="radio" name="security" id="option3" value="0" (change)="test($event.target.value)">
-          Where was your first Job?
-      </label>
-      <label class="btn btn-outline-secondary d-block text-light">
-          <input type="radio" name="security" id="option3" value="1" (change)="test($event.target.value)">
+        <div class="dropdown open">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" (click)="toggleDropdown()">
+              <span *ngIf="data.security.question == -1">Select a security question</span>
+              <span *ngIf="data.security.question > -1">{{questions[data.security.question]}}</span>
+            </button>
+            <div class="dropdown-menu" *ngIf="showDropdown">
+                  <a class="btn btn-outline-secondary d-block" style="text-align: left" (click)="test(0)">
+                  Where was your first Job?</a>
+              <a class="btn btn-outline-secondary d-block" style="text-align: left" (click)="test(1)">
+                  What was your first phone number?
+              </a>
 
-              What was your first phone number?
-
-      </label>
-
-        <label class="btn btn-outline-secondary d-block text-light">
-            <input type="radio" name="security" id="option1" value="2" (change)="test($event.target.value)">
-            What was your first teacher's name?
-        </label>
-        <label class="btn btn-outline-secondary d-block text-light">
-            <input type="radio" name="security" id="option2" value="3" (change)="test($event.target.value)">
-            Who was your best childhood friend?
-        </label>
-
-        <label class="btn btn-outline-secondary d-block text-light">
-            <input type="radio" name="security" id="option3" value="4" (change)="test($event.target.value)">
-                What is your father's middle name?
-        </label>
+              <a class="btn btn-outline-secondary d-block" style="text-align: left" (click)="test(2)">
+                  What was your first teacher's name?
+              </a>
+              <a class="btn btn-outline-secondary d-block" style="text-align: left" (click)="test(3)">
+                  Who was your best childhood friend?
+              </a>
+              <a class="btn btn-outline-secondary d-block" style="text-align: left" (click)="test(4)">
+                  What is your father's middle name?
+              </a>
+            </div>
+        </div>
     </form>
 
     <div class="form-group" *ngIf="data.security.question > -1">
-        <label><span class="text-info">*</span>{{questions[data.security.question]}}</label>
+        <label>
+            <span class="text-info">*</span>{{questions[data.security.question]}}</label>
         <input type="text" class="form-control" id="contactInput" placeholder="your answer" [value]="data.security.answer" (input)="data.security.answer=$event.target.value">
     </div>
     <small class="p-t-2 text-light" *ngIf="processing">Processing.........</small>

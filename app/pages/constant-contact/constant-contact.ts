@@ -15,6 +15,7 @@ export class ConstantContact {
   items: any = [];
   data: any = {};
   processing: boolean = false;
+  showDropdown: boolean = false;
   questions: any = [
     "Where was your first Job?",
     "What was your first phone number?",
@@ -54,9 +55,7 @@ export class ConstantContact {
       } else {
         this.displayError();
       }
-
     //
-
   }
   displayError() {
     this.showError = true;
@@ -71,7 +70,6 @@ export class ConstantContact {
       return true;
     }
     return false;
-
   }
   makeMessage() {
       let msg = this.data.organization + '\n' + this.data.website + '\n' +
@@ -80,14 +78,19 @@ export class ConstantContact {
   }
   resetData() {
     this.data = {website:'', organization: '', name: '', email: '', security: {question: '-1', answer: ''}};
-
   }
   test(q) {
       console.log(q)
       this.data.security.question = q;
+      this.showDropdown = false;
   }
   dismiss() {
     this.showSuccess = false;
     this.resetData();
+  }
+  toggleDropdown() {
+    this.showDropdown = this.showDropdown?false:true;
+  }
+  setSecurity() {
   }
 }

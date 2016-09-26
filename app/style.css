@@ -4448,7 +4448,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
-.p-y-1 {
+.p-y-1, section#camping article h1, section#camping article h2, section#camping article h3, section#camping article h4, section#camping article h5, section#camping article p, section#camping article li {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
@@ -4709,13 +4709,17 @@ body,
 html {
   max-width: 100% !important; }
 
-body .center, body footer p, body section#landing section#team .card, section#landing section#team body .card, body #loading-container #loading, #loading-container body #loading {
+body .center, body footer p, body section#landing section#team .card, section#landing section#team body .card, body section#camping, body section#camping article p, section#camping article body p, body section#camping article li, section#camping article body li, body #loading-container #loading, #loading-container body #loading {
   text-align: center;
   margin: auto;
   display: block; }
 
 body header {
   padding: 10px; }
+
+@media screen and (max-width: 767px) {
+  body section {
+    padding-top: 150px !important; } }
 
 body .row .container {
   max-width: 100%;
@@ -4732,7 +4736,7 @@ body footer {
   body footer p {
     color: #f4fffd; }
 
-body p {
+body .card p {
   text-align: justify !important;
   text-justify: inter-word !important; }
 
@@ -4764,7 +4768,7 @@ body .highlight {
 body .text-dark {
   color: #222 !important; }
 
-body .text-light, body section#landing section#team .card .card-title, section#landing section#team .card body .card-title, body section#constant-contact small, section#constant-contact body small {
+body .text-light, body section#landing section#team .card .card-title, section#landing section#team .card body .card-title, body section#constant-contact small, section#constant-contact body small, body section#camping article h1, section#camping article body h1, body section#camping article h2, section#camping article body h2, body section#camping article h3, section#camping article body h3, body section#camping article h4, section#camping article body h4, body section#camping article h5, section#camping article body h5, body section#camping article p, section#camping article body p, body section#camping article li, section#camping article body li {
   color: #f4fffd; }
 
 body .weight-500 {
@@ -4774,6 +4778,28 @@ body .modal.toast .modal-dialog {
   margin-top: 20%; }
   body .modal.toast .modal-dialog .modal-content {
     border: 0; }
+
+body .fixed {
+  position: fixed; }
+  body .fixed.top {
+    top: 10px; }
+  body .fixed.bottom {
+    bottom: 10px; }
+  body .fixed.left {
+    left: 10px; }
+  body .fixed.right {
+    right: 10px; }
+
+body .absolute {
+  position: absolute; }
+  body .absolute.top {
+    top: 10px; }
+  body .absolute.bottom {
+    bottom: 10px; }
+  body .absolute.left {
+    left: 10px; }
+  body .absolute.right {
+    right: 10px; }
 
 body .card {
   border: 0 !important; }
@@ -4800,11 +4826,27 @@ section#landing section#services header {
   section#landing section#services header h5 {
     color: #222; }
 
-section#constant-contact .text-light, section#constant-contact section#landing section#team .card .card-title, section#landing section#team .card section#constant-contact .card-title, section#constant-contact small {
+section#constant-contact .text-light, section#constant-contact section#landing section#team .card .card-title, section#landing section#team .card section#constant-contact .card-title, section#constant-contact small, section#constant-contact section#camping article h1, section#camping article section#constant-contact h1, section#constant-contact section#camping article h2, section#camping article section#constant-contact h2, section#constant-contact section#camping article h3, section#camping article section#constant-contact h3, section#constant-contact section#camping article h4, section#camping article section#constant-contact h4, section#constant-contact section#camping article h5, section#camping article section#constant-contact h5, section#constant-contact section#camping article p, section#camping article section#constant-contact p, section#constant-contact section#camping article li, section#camping article section#constant-contact li {
   color: #f4fffd !important; }
 
-section#constant-contact p.text-light, section#constant-contact section#landing section#team .card p.card-title, section#landing section#team .card section#constant-contact p.card-title {
+section#constant-contact p.text-light, section#constant-contact section#landing section#team .card p.card-title, section#landing section#team .card section#constant-contact p.card-title, section#constant-contact section#camping article p, section#camping article section#constant-contact p {
   color: #f4fffd !important; }
+
+section#camping {
+  background: url("../resources/images/camping.JPG");
+  box-shadow: inset 0 0 0 1000px rgba(34, 34, 34, 0.7);
+  background-size: cover;
+  min-height: 2000px !important;
+  margin: 0 !important;
+  padding-top: 100px; }
+  section#camping article ol li {
+    text-decoration: inherit !important; }
+  section#camping article img {
+    width: 120px;
+    height: auto; }
+  section#camping article p, section#camping article li {
+    max-width: 600px;
+    text-align: left !important; }
 
 #landing-header-mobile {
   position: fixed;

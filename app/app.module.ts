@@ -1,6 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Landing, ConstantContact } from './pages/index';
+import { Landing, ConstantContact, Camping } from './pages/index';
 import { HttpModule } from '@angular/http';
 // import { Routes, RouterModule } from '@angular/router';
 import { App } from './app';
@@ -10,7 +10,7 @@ import { routing,
 
 @NgModule({
     imports: [BrowserModule, routing, HttpModule],
-    declarations: [Landing, ConstantContact, App],
+    declarations: [Landing, ConstantContact, Camping, App],
     providers: [appRoutingProviders],
     bootstrap: [App]
 

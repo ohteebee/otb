@@ -21,6 +21,7 @@ var ConstantContact = (function () {
         this.items = [];
         this.data = {};
         this.processing = false;
+        this.showDropdown = false;
         this.questions = [
             "Where was your first Job?",
             "What was your first phone number?",
@@ -85,10 +86,16 @@ var ConstantContact = (function () {
     ConstantContact.prototype.test = function (q) {
         console.log(q);
         this.data.security.question = q;
+        this.showDropdown = false;
     };
     ConstantContact.prototype.dismiss = function () {
         this.showSuccess = false;
         this.resetData();
+    };
+    ConstantContact.prototype.toggleDropdown = function () {
+        this.showDropdown = this.showDropdown ? false : true;
+    };
+    ConstantContact.prototype.setSecurity = function () {
     };
     ConstantContact = __decorate([
         core_1.Component({

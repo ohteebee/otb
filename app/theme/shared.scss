@@ -30,6 +30,12 @@ body {
     header {
         padding: $gap;
     }
+    @media screen and (max-width: $mobile-width) {
+      section {
+        padding-top: 150px !important;
+      }
+    }
+
     .row .container {
         max-width: 100%;
         width: 100%;
@@ -47,7 +53,7 @@ body {
             color: $light;
         }
     }
-    p {
+    .card p {
         text-align: justify !important;
         text-justify: inter-word !important;
     }
@@ -102,6 +108,36 @@ body {
                 border: 0;
             }
         }
+    }
+    .fixed {
+      position: fixed;
+      &.top {
+        top: $gap;
+      }
+      &.bottom {
+        bottom: $gap;
+      }
+      &.left {
+        left: $gap;
+      }
+      &.right {
+        right: $gap;
+      }
+    }
+    .absolute {
+      position: absolute;
+      &.top {
+        top: $gap;
+      }
+      &.bottom {
+        bottom: $gap;
+      }
+      &.left {
+        left: $gap;
+      }
+      &.right {
+        right: $gap;
+      }
     }
     .card {
       border: 0 !important;

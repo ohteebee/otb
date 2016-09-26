@@ -4,3 +4,4 @@ function __export(m) {
 }
 __export(require('./landing/landing'));
 __export(require('./constant-contact/constant-contact'));
+__export(require('./camping/camping'));
