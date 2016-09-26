@@ -19,9 +19,8 @@ var Camping = (function () {
             selector: 'camping',
             templateUrl: 'app/pages/camping/camping.html'
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [router_1.Router])
     ], Camping);
     return Camping;
-    var _a;
 }());
 exports.Camping = Camping;

@@ -32,9 +32,8 @@ var App = (function () {
             selector: 'my-app',
             templateUrl: 'app/app.html'
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof router_1.Router !== 'undefined' && router_1.Router) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [router_1.Router])
     ], App);
     return App;
-    var _a;
 }());
 exports.App = App;

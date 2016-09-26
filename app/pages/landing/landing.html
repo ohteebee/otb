@@ -47,8 +47,7 @@
             <header>
                 <h1 class="center">Like what you see?</h1>
             </header>
-            <p class="center">Don't hesitate to give us an email or a call just to chat or with a project, we would love to hear from you. As we are ramping up we are running a promotion.
-                <span class="text-danger">50% off</span> for the first five clients! Only two spots left, act fast to secure an amazing deal!</p>
+            <p class="center">Don't hesitate to get in touch with us, by clicking the button below, or if you prefer give us a call at (970)372-9900. We are open around the clock, based out of the east coast.
 
             <button class="btn btn-outline-danger btn-big center m-t-2" (click)="showForm = true">Hire us</button>
         </div>
@@ -79,7 +78,7 @@
                         <div class="card-block">
                             <h4 class="card-title">Brett Stetson</h4>
                             <p class="card-text">
-                                Full stack developer with a passion for modern technology.
+                              Full-stack developer with a passion for javascript, the open source realm and modern web frameworks.
                             </p>
                         </div>
                     </div>
@@ -117,7 +116,7 @@
                         <input type="text" class="form-control" id="contactInput" placeholder="your email or phone" [value]="formData.email" (input)="formData.email=$event.target.value">
                     </div>
                     <div class="form-group">
-                        <label for="aboutInput">Tell us about your project?</label>
+                        <label for="aboutInput">Tell us about your project, or problem you need solved?</label>
                         <textarea class="form-control" id="aboutInput" rows="4" placeholder="your project" [value]="formData.about" (input)="formData.about=$event.target.value"></textarea>
                     </div>
                     <button class="btn btn-outline-danger btn-block p-a-1" (click)="sendForm()">Submit</button>
