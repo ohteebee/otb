@@ -4448,11 +4448,15 @@ a.bg-danger:focus, a.bg-danger:hover {
   padding-right: 1rem !important;
   padding-left: 1rem !important; }
 
-.p-y-1, section#camping article h1, section#camping article h2, section#camping article h3, section#camping article h4, section#camping article h5, section#camping article p, section#camping article li {
+.p-y-1, section#camping article h1,
+section#camping article h2,
+section#camping article h4,
+section#camping article h5,
+section#camping article p {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important; }
 
-.p-a-2 {
+.p-a-2, section#constant-contact {
   padding: 1.5rem 1.5rem !important; }
 
 .p-t-2 {
@@ -4471,7 +4475,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important; }
 
-.p-y-2, body .btn-big {
+.p-y-2, body .btn-big, section#camping article .container {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important; }
 
@@ -4608,10 +4612,10 @@ a.text-info:focus, #loading-container a#loading:focus, a.text-info:hover, #loadi
 a.text-warning:focus, a.text-warning:hover {
   color: #2b202b; }
 
-.text-danger {
+.text-danger, section#camping article a:not(.btn) {
   color: #f15025 !important; }
 
-a.text-danger:focus, a.text-danger:hover {
+a.text-danger:focus, section#camping article a:focus:not(.btn), a.text-danger:hover, section#camping article a:hover:not(.btn) {
   color: #d5380e; }
 
 .text-hide {
@@ -4695,7 +4699,8 @@ html {
   color: #222;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300 !important; }
-  * h1, * h2,
+  * h1,
+  * h2,
   a h1,
   a h2,
   body h1,
@@ -4709,7 +4714,9 @@ body,
 html {
   max-width: 100% !important; }
 
-body .center, body footer p, body section#landing section#team .card, section#landing section#team body .card, body section#camping, body section#camping article p, section#camping article body p, body section#camping article li, section#camping article body li, body #loading-container #loading, #loading-container body #loading {
+body .center, body footer p, body section#landing section#team .card, section#landing section#team body .card, body section#camping, body section#camping article li, section#camping article body li, body section#camping article ul, section#camping article body ul, body
+section#camping article p,
+section#camping article body p, body #loading-container #loading, #loading-container body #loading {
   text-align: center;
   margin: auto;
   display: block; }
@@ -4725,10 +4732,11 @@ body .row .container {
   max-width: 100%;
   width: 100%; }
 
-body a:active,
-body a:hover {
-  text-decoration: none !important;
-  border-bottom: 0; }
+body a {
+  cursor: hand; }
+  body a:active, body a:hover {
+    text-decoration: none !important;
+    border-bottom: 0; }
 
 body footer {
   background-color: #222;
@@ -4768,15 +4776,28 @@ body .highlight {
 body .text-dark {
   color: #222 !important; }
 
-body .text-light, body section#landing section#team .card .card-title, section#landing section#team .card body .card-title, body section#constant-contact small, section#constant-contact body small, body section#camping article h1, section#camping article body h1, body section#camping article h2, section#camping article body h2, body section#camping article h3, section#camping article body h3, body section#camping article h4, section#camping article body h4, body section#camping article h5, section#camping article body h5, body section#camping article p, section#camping article body p, body section#camping article li, section#camping article body li {
+body .text-light, body section#landing section#team .card .card-title, section#landing section#team .card body .card-title, body section#constant-contact small, section#constant-contact body small, body section#camping article h1, section#camping article body h1, body
+section#camping article h2,
+section#camping article body h2, body
+section#camping article h4,
+section#camping article body h4, body
+section#camping article h5,
+section#camping article body h5, body
+section#camping article p,
+section#camping article body p, body section#camping article li, section#camping article body li {
   color: #f4fffd; }
 
 body .weight-500 {
   font-weight: 500 !important; }
 
+@media screen and (max-width: 767px) {
+  body .modal .modal-dialog {
+    margin-top: 100px !important; } }
+
 body .modal.toast .modal-dialog {
   margin-top: 20%; }
   body .modal.toast .modal-dialog .modal-content {
+    z-index: 99999 !important;
     border: 0; }
 
 body .fixed {
@@ -4804,6 +4825,13 @@ body .absolute {
 body .card {
   border: 0 !important; }
 
+@media screen and (max-width: 767px) {
+  body input[type="text"],
+  body textarea {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important; } }
+
 section#landing .solutions .card {
   padding: 10px 20px;
   background-color: #493548; }
@@ -4826,25 +4854,62 @@ section#landing section#services header {
   section#landing section#services header h5 {
     color: #222; }
 
-section#constant-contact .text-light, section#constant-contact section#landing section#team .card .card-title, section#landing section#team .card section#constant-contact .card-title, section#constant-contact small, section#constant-contact section#camping article h1, section#camping article section#constant-contact h1, section#constant-contact section#camping article h2, section#camping article section#constant-contact h2, section#constant-contact section#camping article h3, section#camping article section#constant-contact h3, section#constant-contact section#camping article h4, section#camping article section#constant-contact h4, section#constant-contact section#camping article h5, section#camping article section#constant-contact h5, section#constant-contact section#camping article p, section#camping article section#constant-contact p, section#constant-contact section#camping article li, section#camping article section#constant-contact li {
+@media screen and (max-width: 767px) {
+  section#constant-contact {
+    padding: 100px 0 20px 0 !important; }
+    section#constant-contact label, section#constant-contact h2, section#constant-contact h5, section#constant-contact small, section#constant-contact #dropdown-toggle {
+      padding-left: 10px !important; }
+    section#constant-contact .dropdown-menu {
+      width: 100% !important; }
+      section#constant-contact .dropdown-menu a:nth(0) {
+        margin-top: -20px !important; } }
+
+section#constant-contact .text-light, section#constant-contact section#landing section#team .card .card-title, section#landing section#team .card section#constant-contact .card-title, section#constant-contact small, section#constant-contact section#camping article h1, section#camping article section#constant-contact h1, section#constant-contact
+section#camping article h2,
+section#camping article section#constant-contact h2, section#constant-contact
+section#camping article h4,
+section#camping article section#constant-contact h4, section#constant-contact
+section#camping article h5,
+section#camping article section#constant-contact h5, section#constant-contact
+section#camping article p,
+section#camping article section#constant-contact p, section#constant-contact section#camping article li, section#camping article section#constant-contact li {
   color: #f4fffd !important; }
 
-section#constant-contact p.text-light, section#constant-contact section#landing section#team .card p.card-title, section#landing section#team .card section#constant-contact p.card-title, section#constant-contact section#camping article p, section#camping article section#constant-contact p {
+section#constant-contact p.text-light, section#constant-contact section#landing section#team .card p.card-title, section#landing section#team .card section#constant-contact p.card-title, section#constant-contact
+section#camping article p,
+section#camping article section#constant-contact p {
   color: #f4fffd !important; }
+
+section#constant-contact input[type="text"] {
+  max-width: 600px; }
 
 section#camping {
   background: url("../resources/images/camping.JPG");
   box-shadow: inset 0 0 0 1000px rgba(34, 34, 34, 0.7);
   background-size: cover;
-  min-height: 2000px !important;
+  height: auto;
   margin: 0 !important;
-  padding-top: 100px; }
+  padding-top: 100px;
+  margin-bottom: 0; }
+  section#camping .text-yell, section#camping h3 {
+    color: #EDDE45; }
+  section#camping .bg-yell {
+    background-color: #EDDE45; }
+  section#camping article .bg-light {
+    background-color: #f4fffd !important; }
   section#camping article ol li {
     text-decoration: inherit !important; }
+  section#camping article a.btn .octicon {
+    color: #f15025; }
+  section#camping article a.btn:hover {
+    color: #f4fffd !important; }
+    section#camping article a.btn:hover .octicon {
+      color: #f4fffd !important; }
   section#camping article img {
-    width: 120px;
+    width: 140px;
     height: auto; }
-  section#camping article p, section#camping article li {
+  section#camping article li, section#camping article ul,
+  section#camping article p {
     max-width: 600px;
     text-align: left !important; }
 

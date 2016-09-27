@@ -6,8 +6,9 @@ import 'rxjs/add/operator/toPromise';
 import { Headers, RequestOptions } from '@angular/http';
 
 @Component({
+    moduleId: module.id,
     selector: 'landing',
-    templateUrl: 'app/pages/landing/landing.html'
+    templateUrl: 'landing.html'
 })
 export class Landing {
     email: string = '';
@@ -17,10 +18,10 @@ export class Landing {
     formData: any = { name: '', email: '', about: '' };
     showSuccess: boolean = false;
     constructor(private http: Http) {
-    //   this.sendForm()
-    // .then(hero => {
-    //   console.log(hero);
-    // });;
+        //   this.sendForm()
+        // .then(hero => {
+        //   console.log(hero);
+        // });;
         // while (true) {
         //     setTimeout(function() {
         //         console.log(this.index);
@@ -45,13 +46,13 @@ export class Landing {
         return this.http.post('https://otb-api.now.sh/api/email/plain', data)
             .toPromise()
             .then(res => {
-              console.log(res.json());
-              self.showForm = false;
-              self.resetData();
-              self.showSuccess = true;
-              setTimeout(function() { self.showSuccess = false }, 3000);
+                console.log(res.json());
+                self.showForm = false;
+                self.resetData();
+                self.showSuccess = true;
+                setTimeout(function() { self.showSuccess = false }, 3000);
             }
-          )
+            )
             .catch(this.handleError);
         //
 
@@ -77,6 +78,6 @@ export class Landing {
         return msg;
     }
     resetData() {
-      this.formData = {name: '', email: '', about: ''};
+        this.formData = { name: '', email: '', about: '' };
     }
 }

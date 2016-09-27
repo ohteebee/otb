@@ -29,8 +29,9 @@ var App = (function () {
     };
     App = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-app',
-            templateUrl: 'app/app.html'
+            templateUrl: 'app.html'
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], App);

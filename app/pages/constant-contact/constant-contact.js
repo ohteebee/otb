@@ -99,8 +99,9 @@ var ConstantContact = (function () {
     };
     ConstantContact = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'constant-contact',
-            templateUrl: 'app/pages/constant-contact/constant-contact.html'
+            templateUrl: 'constant-contact.html'
         }), 
         __metadata('design:paramtypes', [http_1.Http, router_1.Router])
     ], ConstantContact);

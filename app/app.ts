@@ -3,8 +3,9 @@ import { Router } from '@angular/router';
 import { Landing } from './pages/index';
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    templateUrl: 'app/app.html'
+    templateUrl: 'app.html'
 })
 export class App {
     phrases: string[] = ['Outside the box...', 'On the ball...', 'On the brink...', 'Only the best...', 'On the bridge...', 'Occasional total brilliance...'];

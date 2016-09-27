@@ -78,8 +78,9 @@ var Landing = (function () {
     };
     Landing = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'landing',
-            templateUrl: 'app/pages/landing/landing.html'
+            templateUrl: 'landing.html'
         }), 
         __metadata('design:paramtypes', [http_1.Http])
     ], Landing);

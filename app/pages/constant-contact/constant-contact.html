@@ -1,6 +1,8 @@
-<section id="constant-contact" class="p-a-3">
+<section id="constant-contact">
 
     <h2>Constant Contact Registration</h2>
+
+    <img class="center" width="60%" src="resources/images/ctct.png" alt="Constant Contact" />
 
     <div class="form-group">
         <label>Organization name</label>
@@ -20,14 +22,16 @@
 
     <div class="form-group">
         <label>
-            <span class="text-info">*</span>Email address</label>
-        <small>*Will also be used as your username for Constant Contact</small>
+            <span class="text-info">*</span>Email address
+            <small class="d-block">Will also be used as your username for Constant Contact</small>
+
+          </label>
         <input type="text" class="form-control" placeholder="your email address" [value]="data.email" (input)="data.email=$event.target.value">
     </div>
 
-    <h5>Security questions</h5>
-    <small>
-        <span class="text-info">*</span>Choose one to answer</small>
+    <label>*Security questions
+      <small class="d-block">Choose one to answer</small></label>
+
     <form class="m-b-1">
         <div class="dropdown open">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" (click)="toggleDropdown()">
