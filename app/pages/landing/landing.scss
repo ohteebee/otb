@@ -18,8 +18,6 @@ section#landing {
             p {
                 color: $light !important;
             }
-
-
         }
     }
 
@@ -28,6 +26,9 @@ section#landing {
             // max-width: 300px !important;
             .card-title {
               @extend .text-light;
+            }
+            h5 {
+              font-size: 1.15em;
             }
             word-wrap: normal;
             @extend .m-a-1;

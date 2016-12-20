@@ -30,24 +30,20 @@ body {
         margin: auto;
         display: block;
     }
-
     header {
         padding: $gap;
     }
     @media screen and (max-width: $mobile-width) {
         section {
-            padding-top: 150px !important;
+            padding-top: 80px !important;
         }
     }
-
     .row .container {
         max-width: 100%;
         width: 100%;
     }
-
     a {
         cursor: hand;
-
         &:active,
         &:hover {
             text-decoration: none !important;

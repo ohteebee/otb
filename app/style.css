@@ -4726,7 +4726,7 @@ body header {
 
 @media screen and (max-width: 767px) {
   body section {
-    padding-top: 150px !important; } }
+    padding-top: 80px !important; } }
 
 body .row .container {
   max-width: 100%;
@@ -4845,6 +4845,8 @@ section#landing .solutions .card {
 
 section#landing section#team .card {
   word-wrap: normal; }
+  section#landing section#team .card h5 {
+    font-size: 1.15em; }
   section#landing section#team .card p.card-text {
     text-align: left; }
 

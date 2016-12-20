@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 
-var app = express.createServer();
+var app = express();
 
 // expose node_modules to client app
 // app.use(express.static(__dirname + "/node_modules"));
@@ -53,5 +53,5 @@ app.use(function(err, req, res, next) {
 
 // app.set('port', process.env.PORT || 4444);
 
-app.listen();
+app.listen(4444);
 module.exports = app;
